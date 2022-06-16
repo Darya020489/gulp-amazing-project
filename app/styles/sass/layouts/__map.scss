@@ -1,0 +1,18 @@
+.map {
+  padding-top: 42px;
+  padding-bottom: 23px;
+  background-image: linear-gradient(rgba(255, 255, 255, 0.9)),
+    url("../images/dist/map/map.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  &__link {
+    display: inline-block;
+margin: 0 auto;
+  }
+
+  &__img {
+    width: 42px;
+    height: 42px;
+  }
+}

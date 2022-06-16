@@ -1,0 +1,33 @@
+.reviews-slider {
+    position: relative;
+    padding: 0 42px; 
+
+    &__arrow {
+        position: absolute;
+        top: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 42px;
+        height: 42px;
+        background: none;
+        border: none;
+        color: #C6CBCD;
+        z-index: 1;
+        
+        &:first-child {
+            left: 0;
+            transform: translatey(-50%) rotate(180deg);
+        }
+        
+        &:last-child {
+            right: 0; 
+            transform: translatey(-50%);
+        }
+
+        & svg path{
+            fill: #C6CBCD;
+        }
+    }
+
+}

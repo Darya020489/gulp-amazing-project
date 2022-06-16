@@ -1,0 +1,43 @@
+.reviews-slide {
+  display: flex;
+  align-items: center;
+
+  &__icon {
+    width: 170px;
+    flex-shrink: 0;
+  }
+
+  &__content {
+    padding-left: 30px;
+  }
+
+  &__text {
+    color: aqua;
+    margin-bottom: 25px;
+    font-style: italic;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 1.2;
+    color: var(--secondary-color);
+  }
+
+  &__autor {
+    font-family: "Kaushan Script";
+    font-weight: 400;
+    font-size: 30px;
+
+    &::before {
+      content: "";
+      display: inline-block;
+      margin-right: 56px;
+      width: 70px;
+      height: 4px;
+      vertical-align: middle;
+      background-color: var(--accent);
+    }
+  }
+
+  &_light &__icon {
+    border-radius: 50%;
+  }
+}

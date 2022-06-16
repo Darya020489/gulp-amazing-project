@@ -1,0 +1,20 @@
+/* INPUT ++++================================ */
+.form-input {
+  width: 100%;
+  padding: 17px;
+  font-weight: 400;
+  font-size: 18px;
+  background: var(--white);
+  border: 1px solid var(--grey);
+}
+
+@media (max-width: 1200px) {
+  .form-input {
+    padding: 10px;
+    font-size: 14px;
+  }
+}
+
+.form-input::placeholder {
+  color: var(--grey);
+}

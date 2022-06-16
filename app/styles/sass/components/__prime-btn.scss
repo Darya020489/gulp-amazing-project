@@ -1,0 +1,17 @@
+/* BUTTON ========================================== */
+.prime-btn {
+  display: inline-block;
+  padding: 17px;
+  font-weight: 700;
+  font-size: 18px;
+  border: none;
+  color: var(--white);
+  background: var(--blue);
+}
+
+@media (max-width: 1200px) {
+  .prime-btn {
+    padding: 10px;
+    font-size: 14px;
+  }
+}

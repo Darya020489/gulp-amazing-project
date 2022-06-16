@@ -1,0 +1,9 @@
+.reviews {
+  padding: 42px 0;
+  background-color: var(--light-grey);
+
+  &_light {
+    padding: 126px 0;
+    background-color: var(--white);
+  }
+}

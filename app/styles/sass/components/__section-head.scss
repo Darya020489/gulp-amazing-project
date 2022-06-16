@@ -1,0 +1,61 @@
+.section-head {
+  text-align: center;
+  color: var(--black);
+}
+
+.section-head_accent .section-head__title {
+  color: var(--accent);
+}
+
+.section-head__subtitle {
+  padding: 18px 0;
+  font-family: "Kaushan Script";
+  font-size: 30px;
+  font-weight: 400;
+  line-height: 1.5;
+  color: var(--black);
+}
+
+@media (max-width: 1200px) {
+  .section-head__subtitle {
+    padding: 16px 0;
+    font-size: 24px;
+  }
+}
+
+.section-head__title {
+  padding: 19px;
+  font-family: "Raleway";
+  font-size: 36px;
+  font-weight: 900;
+  line-height: 1.2;
+  color: var(--black);
+  text-transform: uppercase;
+}
+
+@media (max-width: 1200px) {
+  .section-head__title {
+    font-size: 24px;
+  }
+}
+
+.section-head__title::after {
+  content: "";
+  display: block;
+  width: 170px;
+  height: 4px;
+  margin: 24px auto 0;
+  background: var(--accent);
+}
+
+@media (max-width: 1200px) {
+  .section-head__title::after {
+    width: 148px;
+  }
+}
+
+@media (max-width: 560px) {
+  .section-head__title::after {
+    width: 144px;
+  }
+}

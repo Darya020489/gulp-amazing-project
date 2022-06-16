@@ -1,0 +1,60 @@
+.clients {
+  padding-top: 42px;
+  padding-bottom: 23px;
+  background-image: linear-gradient(rgba(255, 255, 255, 0.9)),
+    url("../images/dist/clients/nature.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  &__row {
+    padding-top: 42px;
+  }
+
+  &__card {
+    display: flex;
+    margin-top: 23px;
+    margin-bottom: 19px;
+  }
+
+  &__autor-icon {
+    margin-top: 20px;
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+  }
+
+  &__autor-feedback {
+    margin-left: 50px;
+  }
+
+  &__autor-name {
+    margin-bottom: 20px;
+    font-weight: 700;
+    font-size: 24px;
+    text-transform: uppercase;
+    color: var(--black);
+  }
+
+  &__autor-position {
+    font-weight: 400;
+    font-size: 18px;
+    text-transform: uppercase;
+    color: var(--black);
+
+    &::after {
+      content: "";
+      display: block;
+      width: 70px;
+      height: 4px;
+      margin-top: 32px;
+      background: var(--accent);
+    }
+  }
+
+  &__text {
+    margin-top: 32px;
+    font-weight: 400;
+    font-size: 18px;
+    color: var(--black);
+  }
+}
