@@ -46,7 +46,7 @@
 				<nav class="header__nav">
 					<ul class="header__menu">
 						<li class="header__menu-item header__menu-item_has-child">
-							<a class="header__menu-link" href="#">about
+							<a class="header__menu-link" href="#about">about
 								<svg class="header__menu-img" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
 									<title />
 									<g data-name="Layer 2" id="Layer_2">
@@ -89,11 +89,11 @@
 								</li>
 							</ul>
 						</li>
-						<li class="header__menu-item"><a class="header__menu-link" href="#!">service</a></li>
+						<li class="header__menu-item"><a class="header__menu-link" href="#service">service</a></li>
 						<li class="header__menu-item header__menu-item_active"><a class="header__menu-link"
-								href="#">work</a></li>
-						<li class="header__menu-item"><a class="header__menu-link" href="#">blog</a></li>
-						<li class="header__menu-item"><a class="header__menu-link" href="#">contact</a></li>
+								href="#work">work</a></li>
+						<li class="header__menu-item"><a class="header__menu-link" href="#blog">blog</a></li>
+						<li class="header__menu-item"><a class="header__menu-link" href="#map">contact</a></li>
 						<li class="header__menu-item"><a class="header__menu-link" href="#">
 								<svg class="header__menu-img" width="24" height="24" viewBox="0 0 24 24" fill="none"
 									xmlns="http://www.w3.org/2000/svg">
@@ -125,8 +125,27 @@
 										fill="white" />
 								</svg>
 							</a></li>
+						<label class="switch">
+							<input class="switch__input" type="checkbox" name="theme" value="dark">
+							<span class="switch__slider"></span>
+						</label>
+
+
+
+
+
+						
 					</ul>
+					<div class="header__nav-close">
+						<span class="header__nav-close-line"></span>
+						<span class="header__nav-close-line"></span>
+					</div>
 				</nav>
+				<button class="burger header__burger">
+					<span class="burger__line"></span>
+					<span class="burger__line"></span>
+					<span class="burger__line"></span>
+				</button>
 			</div>
 		</div>
 	</header>
@@ -134,16 +153,39 @@
 <main class="main">
     <section class="promo">
         <div class="container">
-            <p class="promo__subtitle" data-aos="fade-right">Creative Template</p>
-            <h1 class="promo__title" data-aos="fade-up">Welcome</br> to MoGo</h1>
-            <a class="promo__link" href="#">learn more</a>
+            <div class="splide promo-slider" id="promo-slider" aria-labelledby="carousel-heading">
+                <div class="splide__track">
+                    <ul class="splide__list">
+                        <li class="splide__slide promo-slide">
+                            <p class="promo-slide__subtitle" data-aos="fade-right">Creative Template</p>
+                            <h1 class="promo-slide__title" data-aos="fade-up">Welcome</br> to MoGo</h1>
+                            <a class="promo-slide__link" href="#">learn more</a>
+                        </li>
+                        <li class="splide__slide">
+                            <p class="promo-slide__subtitle" data-aos="fade-right">new features</p>
+                            <h1 class="promo-slide__title" data-aos="fade-up">Welcome</br> to MoGo</h1>
+                            <a class="promo-slide__link" href="#">learn more</a>
+                        </li>
+                        <li class="splide__slide">
+                            <p class="promo-slide__subtitle" data-aos="fade-right">amazing graphics</p>
+                            <h1 class="promo-slide__title" data-aos="fade-up">Welcome</br> to MoGo</h1>
+                            <a class="promo-slide__link" href="#">learn more</a>
+                        </li>
+                        <li class="splide__slide">
+                            <p class="promo-slide__subtitle" data-aos="fade-right">exciting projects</p>
+                            <h1 class="promo-slide__title" data-aos="fade-up">Welcome</br> to MoGo</h1>
+                            <a class="promo-slide__link" href="#">learn more</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
         </div>
     </section>
     <!-- end PROMO ==================================================================-->
 
 
     <!-- start ABOUT ==================================================================-->
-    <section class="about">
+    <section class="about" id="about">
         <div class="container">
             <div class="section-head">
                 <p class="section-head__subtitle">What we do</p>
@@ -155,22 +197,37 @@
                 sit
                 fermentum risus feugiat.</p>
             <div class="about__row row">
-                <div class="about__card col-4">
-                    <div class="about__img-wrap">
-                        <div class="about__overlay">
-                            <img class="about__overlay-img" src="./images/dist/about/person-icon.svg" alt="person">
-                            <p class="about__overlay-text">Super team</p>
+                <div class="about__card card col-4 col-lg-6 col-sm-12">
+                    <div class="card__inner">
+                        <div class="card__wrap">
+                            <img class="card__img card__img_visible-sm" src="./images/dist/about/img-1.jpg" alt="">
+                        </div>
+                        <div class="card__overlay">
+                            <img class="card__overlay-img" src="./images/dist/about/person-icon.svg" alt="person">
+                            <p class="card__overlay-text">Super team</p>
                         </div>
                     </div>
                 </div>
-                <div class="about__card col-4">
-                    <div class="about__img-wrap">
-                        <img class="about__img" src="./images/dist/about/design.jpg" alt="design">
+                <div class="about__card card col-4 col-lg-6 col-sm-12">
+                    <div class="card__inner">
+                        <div class="card__wrap">
+                            <img class="card__img" src="./images/dist/about/img-2.jpg" alt="">
+                        </div>
+                        <div class="card__overlay">
+                            <img class="card__overlay-img" src="./images/dist/about/person-icon.svg" alt="person">
+                            <p class="card__overlay-text">Super team</p>
+                        </div>
                     </div>
                 </div>
-                <div class="about__card col-4">
-                    <div class="about__img-wrap">
-                        <img class="about__img" src="./images/dist/about/building.jpg" alt="building">
+                <div class="about__card card col-4 col-lg-6 col-sm-12">
+                    <div class="card__inner">
+                        <div class="card__wrap">
+                            <img class="card__img" src="./images/dist/about/img-3.jpg" alt="">
+                        </div>
+                        <div class="card__overlay">
+                            <img class="card__overlay-img" src="./images/dist/about/person-icon.svg" alt="person">
+                            <p class="card__overlay-text">Super team</p>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -215,42 +272,42 @@
                 <h2 class="section-head__title">amazing services</h2>
             </div>
             <div class="amazing__row row">
-                <div class="amazing__card col-4 col-md-6 col-xs-12">
+                <div class="amazing__card col-4 col-lg-6 col-sm-12">
                     <img class="amazing__card-img" src="./images/dist/amazing/icon-1.svg" alt="">
                     <div class="amazing__info">
                         <p class="amazing__card-name">photography</p>
                         <p class="amazing__card-desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
                     </div>
                 </div>
-                <div class="amazing__card col-4 col-md-6 col-xs-12">
+                <div class="amazing__card col-4 col-lg-6 col-sm-12">
                     <img class="amazing__card-img" src="./images/dist/amazing/icon-2.svg" alt="">
                     <div class="amazing__info">
                         <p class="amazing__card-name">web design</p>
                         <p class="amazing__card-desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
                     </div>
                 </div>
-                <div class="amazing__card col-4 col-md-6 col-xs-12">
+                <div class="amazing__card col-4 col-lg-6 col-sm-12">
                     <img class="amazing__card-img" src="./images/dist/amazing/icon-3.svg" alt="">
                     <div class="amazing__info">
                         <p class="amazing__card-name">creativity</p>
                         <p class="amazing__card-desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
                     </div>
                 </div>
-                <div class="amazing__card col-4 col-md-6 col-xs-12">
+                <div class="amazing__card col-4 col-lg-6 col-sm-12">
                     <img class="amazing__card-img" src="./images/dist/amazing/icon-4.svg" alt="">
                     <div class="amazing__info">
                         <p class="amazing__card-name">seo</p>
                         <p class="amazing__card-desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
                     </div>
                 </div>
-                <div class="amazing__card col-4 col-md-6 col-xs-12">
+                <div class="amazing__card col-4 col-lg-6 col-sm-12">
                     <img class="amazing__card-img" src="./images/dist/amazing/icon-5.svg" alt="">
                     <div class="amazing__info">
                         <p class="amazing__card-name">css/html</p>
                         <p class="amazing__card-desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
                     </div>
                 </div>
-                <div class="amazing__card col-4 col-md-6 col-xs-12">
+                <div class="amazing__card col-4 col-lg-6 col-sm-12">
                     <img class="amazing__card-img" src="./images/dist/amazing/icon-6.svg" alt="">
                     <div class="amazing__info">
                         <p class="amazing__card-name">digital</p>
@@ -261,14 +318,86 @@
         </div>
     </section>
     <!-- end AMAZING ==================================================================-->
+    <!-- start DEVICES ==================================================================-->
+    <section class="devices">
+        <div class="container">
+            <div class="section-head devices__head">
+                <p class="section-head__subtitle">For all devices</p>
+                <h2 class="section-head__title">unique design</h2>
+            </div>
+            <div class="devices__wrap">
+                <img class="devices__img-mac" src="./images/dist/devices/mac.png" alt="mac">
+                <img class="devices__img-iphone" src="./images/dist/devices/iphone.png" alt="iphone">
+            </div>
+        </div>
+    </section>
+    <!-- end DEVICES ==================================================================-->
+    <!-- start SERVICE ==================================================================-->
+    <section class="service" id="service">
+        <div class="container">
+            <div class="section-head">
+                <p class="section-head__subtitle">Service</p>
+                <h2 class="section-head__title">what we do</h2>
+            </div>
+            <p class="service__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Eu facilisis sed venenatis
+                lacus. Eget sit ridiculus facilisi amet. Dis sapien ipsum enim dui fermentum viverra dolor sit. Aliquet
+                congue sit fermentum risus feugiat.</p>
+            <div class="service__row row">
+                <div class="col-6 col-md-12">
+                    <div class="service__wrap-img">
+                        <img class="service__img" src="./images/dist/service/man.jpg" loading="lazy" alt="">
+                    </div>
+                </div>
+                <div class="accordion col-6 col-md-12">
+                    <div class="accordion__item">
+                        <button class="accordion__btn">photography
+                            <img class="accordion__img" src="./images/src/svg-icons/drop-down-arrow.svg" alt="arrow">
+                        </button>
+                        <div class="accordion__desc">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Eros, nunc, rhoncus, id
+                                tincidunt tellus rhoncus ornare. Amet, et elementum enim mattis. Purus volutpat sagittis
+                                ut adipiscing congue euismod sit enim fringilla. Proin viverra nibh in vel ut pulvinar
+                                nec senectus. Justo, id ac facilisis fringilla fermentum sed nunc aenean.Lorem ipsum
+                                dolor sit amet, consectetur adipiscing elit. Eros, nunc, rhoncus, id
+                                tincidunt tellus rhoncus ornare. Amet, et elementum enim mattis. Purus volutpat sagittis
+                                ut adipiscing congue euismod sit enim fringilla. Proin viverra nibh in vel ut pulvinar
+                                nec senectus. Justo, id ac facilisis fringilla fermentum sed nunc aenean.</p>
+                        </div>
+                    </div>
+                    <div class="accordion__item">
+                        <button class="accordion__btn">creativity
+                            <img class="accordion__img" src="./images/src/svg-icons/drop-down-arrow.svg" alt="arrow">
+                        </button>
+                        <div class="accordion__desc">
+                            <p>Lorem ipsum dolor sit amet,</p>
+                        </div>
+                    </div>
+                    <div class="accordion__item">
+                        <button class="accordion__btn">web design
+                            <img class="accordion__img" src="./images/src/svg-icons/drop-down-arrow.svg" alt="arrow">
+                        </button>
+                        <div class="accordion__desc">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Eros, nunc, rhoncus, id
+                                tincidunt tellus rhoncus ornare. Amet, et elementum enim mattis. Purus volutpat sagittis
+                                ut adipiscing congue euismod sit enim fringilla. Proin viverra nibh in vel ut pulvinar
+                                nec senectus.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- end SERVICE================================================================== -->
+
     <!-- start REVIEWS ==================================================================-->
     <section class="reviews">
         <div class="container">
-            <div class="splide reviews-slider" aria-labelledby="carousel-heading">
+            <div class="splide reviews-slider" id="reviews-slider" aria-labelledby="carousel-heading">
                 <div class="splide__track">
                     <ul class="splide__list">
                         <li class="splide__slide reviews-slide">
-                            <img class="reviews-slide__icon" src="./images/dist/reviews/comment-icon.svg" alt="">
+                            <img class="reviews-slide__icon reviews-slide__icon-img"
+                                src="./images/dist/reviews/comment-icon.svg" alt="">
                             <div class="reviews-slide__content">
                                 <p class="reviews-slide__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                                     Neque nec diam platea ullamcorper feugiat amet. Id aliquet vehicula feugiat arcu
@@ -277,7 +406,8 @@
                             </div>
                         </li>
                         <li class="splide__slide reviews-slide">
-                            <img class="reviews-slide__icon" src="./images/dist/reviews/comment-icon.svg" alt="">
+                            <img class="reviews-slide__icon reviews-slide__icon-img"
+                                src="./images/dist/reviews/comment-icon.svg" alt="">
                             <div class="reviews-slide__content">
                                 <p class="reviews-slide__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                                     Neque nec diam platea ullamcorper feugiat amet. Id aliquet
@@ -287,7 +417,8 @@
                             </div>
                         </li>
                         <li class="splide__slide reviews-slide">
-                            <img class="reviews-slide__icon" src="./images/dist/reviews/comment-icon.svg" alt="">
+                            <img class="reviews-slide__icon reviews-slide__icon-img"
+                                src="./images/dist/reviews/comment-icon.svg" alt="">
                             <div class="reviews-slide__content">
                                 <p class="reviews-slide__text">Lorem ipsum dolor sit amet.</p>
                                 <p class="reviews-slide__autor">Mark Smith</p>
@@ -299,110 +430,325 @@
         </div>
     </section>
     <!-- end REVIEWS ==================================================================-->
-    <!-- start WORK ==================================================================-->
-    <section class="work">
+    <!-- start TEAM ==================================================================-->
+    <section class="team">
+        <div class="container">
             <div class="section-head">
-                <p class="section-head__subtitle">What we do</p>
-                <h2 class="section-head__title">some of our work</h2>
+                <p class="section-head__subtitle">Who we are</p>
+                <h2 class="section-head__title">meet our team</h2>
             </div>
-            <p class="work__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Eu facilisis sed venenatis
-                lacus.
-                Eget sit ridiculus facilisi amet. Dis sapien ipsum enim dui fermentum viverra dolor sit. Aliquet congue
-                sit
-                fermentum risus feugiat.</p>
-            <div class="work__gallery">
-                <div class="work__item">
+            <p class="team__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Eu facilisis sed venenatis
+                lacus. Eget sit ridiculus facilisi amet. Dis sapien ipsum enim dui fermentum viverra dolor sit. Aliquet
+                congue sit fermentum risus feugiat.</p>
+            <div class="team__row row">
+                <div class="team__card card col-4 col-lg-6 col-sm-12">
+                    <div class="card__inner">
+                        <div class="card__wrap card__wrap_big">
+                            <img class="card__img" src="./images/dist/team/person-1.jpg" alt="">
+                        </div>
+                        <div class="card__overlay">
+                            <ul class="card__social-list">
+                                <li class="card__social-item">
+                                    <a class="card__social-link" href="#"><svg width="42" height="42"
+                                            viewBox="0 0 42 42" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <rect width="42" height="42" fill="#F9EFCF" />
+                                            <path
+                                                d="M23.4448 36.7448V22.4018H28.2836L29.0028 16.7861H23.4448V13.2091C23.4448 11.5886 23.8963 10.4791 26.2221 10.4791H29.1691V5.4723C27.7352 5.31864 26.2939 5.24444 24.8518 5.25005C20.5748 5.25005 17.6383 7.86105 17.6383 12.6543V16.7756H12.8311V22.3913H17.6488V36.7448H23.4448Z"
+                                                fill="#F38281" />
+                                        </svg>
+                                    </a>
+                                </li>
+                                <li class="card__social-item">
+                                    <a class="card__social-link" href="#"><svg width="42" height="42"
+                                            viewBox="0 0 42 42" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <rect width="42" height="42" fill="#F9EFCF" />
+                                            <path
+                                                d="M34.9913 11.704C36.56 10.7661 37.7338 9.2894 38.2935 7.54948C36.8194 8.42417 35.2066 9.0403 33.5248 9.37123C32.3905 8.17135 30.893 7.37784 29.2632 7.11304C27.6334 6.84823 25.9618 7.12683 24.506 7.90588C23.0502 8.68493 21.891 9.92119 21.2071 11.4241C20.5233 12.927 20.3527 14.6131 20.7218 16.2225C17.7361 16.0726 14.8152 15.2965 12.1489 13.9447C9.48256 12.5928 7.13029 10.6953 5.24478 8.37548C4.28589 10.0294 3.99247 11.9863 4.42411 13.8487C4.85575 15.7112 5.98009 17.3395 7.56878 18.403C6.37652 18.3647 5.2107 18.0418 4.16853 17.4615V17.556C4.16886 19.2902 4.76901 20.9709 5.86719 22.3131C6.96537 23.6553 8.49397 24.5763 10.1938 24.92C9.08789 25.2209 7.92789 25.2652 6.80228 25.0495C7.28305 26.541 8.21751 27.8453 9.47524 28.7802C10.733 29.7151 12.2512 30.234 13.818 30.2645C11.1577 32.3525 7.87236 33.4848 4.49053 33.4792C3.89028 33.4792 3.29178 33.4442 2.69678 33.376C6.131 35.5827 10.1279 36.754 14.21 36.75C17.0216 36.7693 19.809 36.2297 22.4102 35.1626C25.0115 34.0956 27.3748 32.5222 29.3628 30.534C31.3508 28.5458 32.924 26.1824 33.9909 23.581C35.0577 20.9797 35.5971 18.1923 35.5775 15.3807C35.5775 15.0552 35.5705 14.7315 35.5548 14.4095C37.0256 13.3466 38.295 12.0298 39.3033 10.521C37.933 11.1283 36.4796 11.5271 34.9913 11.704Z"
+                                                fill="#F38281" />
+                                        </svg></a>
+                                </li>
+                                <li class="card__social-item">
+                                    <a class="card__social-link" href="#"><svg width="42" height="42"
+                                            viewBox="0 0 42 42" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <rect width="42" height="42" fill="#F9EFCF" />
+                                            <path
+                                                d="M18.6725 26.4197C17.787 31.1902 16.709 35.7647 13.51 38.1535C12.5248 30.9435 14.9608 25.5272 16.0913 19.7785C14.1628 16.436 16.324 9.70721 20.391 11.3645C25.396 13.405 16.0563 23.793 22.3265 25.0915C28.8733 26.446 31.5473 13.3962 27.4873 9.15071C21.6213 3.02396 10.4125 9.01246 11.7915 17.7852C12.1275 19.9307 14.2783 20.5817 12.6508 23.5427C8.89704 22.6835 7.77704 19.635 7.92229 15.5697C8.15329 8.91971 13.727 4.26121 19.3165 3.61721C26.3865 2.80171 33.0208 6.28946 33.936 13.1372C34.9685 20.8652 30.7458 29.2372 23.1875 28.6335C21.1383 28.4707 20.2773 27.426 18.6725 26.4197Z"
+                                                fill="#F38281" />
+                                        </svg></a>
+                                </li>
+                                <li class="card__social-item">
+                                    <a class="card__social-link" href="#"><svg width="42" height="42"
+                                            viewBox="0 0 42 42" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <rect width="42" height="42" fill="#F9EFCF" />
+                                            <path
+                                                d="M21.0034 36.8215C16.6984 36.8215 16.1909 36.7988 14.5109 36.7253C13.2008 36.6822 11.9077 36.4159 10.6872 35.9378C9.64273 35.5313 8.69423 34.9121 7.9019 34.1195C7.10957 33.3269 6.49073 32.3781 6.08467 31.3335C5.62495 30.1086 5.377 28.8144 5.35142 27.5063C5.25342 25.8298 5.25342 25.2803 5.25342 21.0085C5.25342 16.6913 5.27617 16.1873 5.35142 14.516C5.37756 13.2097 5.6255 11.9173 6.08467 10.694C6.49026 9.64813 7.10952 8.69831 7.90291 7.90522C8.69629 7.11214 9.64635 6.49324 10.6924 6.08804C11.915 5.6264 13.2078 5.3778 14.5144 5.35304C16.1857 5.25854 16.7352 5.25854 21.0034 5.25854C25.3434 5.25854 25.8422 5.28129 27.4959 5.35304C28.8049 5.37754 30.1034 5.62604 31.3284 6.08804C32.3742 6.49371 33.324 7.11278 34.1174 7.9058C34.9107 8.69882 35.5301 9.64841 35.9362 10.694C36.4034 11.9365 36.6537 13.249 36.6729 14.5738C36.7709 16.2503 36.7709 16.798 36.7709 21.068C36.7709 25.338 36.7464 25.898 36.6729 27.5553C36.6468 28.8646 36.3982 30.16 35.9379 31.386C35.5308 32.4314 34.9108 33.3806 34.1173 34.1735C33.3238 34.9665 32.374 35.5857 31.3284 35.992C30.1034 36.4505 28.8102 36.699 27.5029 36.7253C25.8317 36.8215 25.2839 36.8215 21.0034 36.8215ZM20.9439 8.02879C16.6634 8.02879 16.2189 8.04979 14.5477 8.12504C13.5496 8.1381 12.5611 8.32218 11.6252 8.66929C10.9425 8.93095 10.3223 9.33274 9.8045 9.84876C9.28666 10.3648 8.88271 10.9836 8.61867 11.6653C8.26867 12.6103 8.08492 13.6095 8.07442 14.6175C7.98167 16.3133 7.98167 16.7578 7.98167 21.0085C7.98167 25.2085 7.99742 25.7178 8.07442 27.403C8.09017 28.4005 8.27392 29.3893 8.61867 30.3255C9.15417 31.7028 10.2462 32.7913 11.6269 33.3198C12.5616 33.6691 13.5499 33.8532 14.5477 33.864C16.2417 33.962 16.6879 33.962 20.9439 33.962C25.2367 33.962 25.6812 33.941 27.3384 33.864C28.3366 33.852 29.3253 33.6679 30.2609 33.3198C30.9399 33.0561 31.5566 32.6541 32.0718 32.1392C32.587 31.6243 32.9894 31.0079 33.2534 30.329C33.6034 29.384 33.7872 28.383 33.7977 27.375H33.8169C33.8922 25.702 33.8922 25.2558 33.8922 20.9805C33.8922 16.7053 33.8729 16.2555 33.7977 14.5843C33.7818 13.5876 33.5978 12.6007 33.2534 11.6653C32.99 10.9855 32.5878 10.368 32.0726 9.85221C31.5574 9.33639 30.9404 8.93353 30.2609 8.66929C29.3247 8.31929 28.3359 8.1373 27.3384 8.12504C25.6462 8.0288 25.2034 8.02879 20.9439 8.02879ZM21.0034 29.0918C19.4032 29.0928 17.8386 28.6193 16.5075 27.731C15.1764 26.8428 14.1386 25.5797 13.5254 24.1016C12.9122 22.6235 12.7512 20.9967 13.0626 19.4271C13.374 17.8574 14.144 16.4154 15.275 15.2834C16.4061 14.1513 17.8475 13.3801 19.4168 13.0673C20.9862 12.7546 22.6131 12.9142 24.0917 13.5261C25.5704 14.138 26.8343 15.1747 27.7237 16.505C28.6132 17.8353 29.0881 19.3995 29.0884 20.9998C29.0856 23.1439 28.2332 25.1994 26.7177 26.7162C25.2023 28.2329 23.1475 29.0872 21.0034 29.0918ZM21.0034 15.7463C19.9651 15.7463 18.95 16.0542 18.0867 16.6311C17.2233 17.208 16.5504 18.0279 16.153 18.9872C15.7557 19.9465 15.6517 21.0021 15.8543 22.0205C16.0569 23.0389 16.5569 23.9744 17.2911 24.7086C18.0253 25.4428 18.9608 25.9428 19.9792 26.1454C20.9976 26.348 22.0532 26.244 23.0125 25.8467C23.9718 25.4493 24.7918 24.7764 25.3686 23.913C25.9455 23.0497 26.2534 22.0346 26.2534 20.9963C26.2502 19.6049 25.696 18.2714 24.7122 17.2876C23.7283 16.3037 22.3948 15.7495 21.0034 15.7463ZM29.4034 14.4985C29.1557 14.4976 28.9105 14.4479 28.682 14.3523C28.4535 14.2566 28.246 14.1169 28.0715 13.9411C27.719 13.586 27.5221 13.1054 27.5239 12.605C27.5258 12.1047 27.7263 11.6256 28.0814 11.2731C28.4365 10.9207 28.9171 10.7237 29.4174 10.7255C29.9177 10.7274 30.3968 10.9279 30.7493 11.283C31.1018 11.6381 31.2988 12.1187 31.2969 12.619C31.2951 13.1194 31.0945 13.5985 30.7394 13.951C30.3843 14.3034 29.9037 14.5004 29.4034 14.4985Z"
+                                                fill="#F38281" />
+                                        </svg>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="card__desc">
+                        <p class="card__autor-name">Kadin Dias</p>
+                        <p class="card__autor-position">founder, ceo</p>
+                    </div>
+                </div>
+                <div class="team__card card col-4 col-lg-6 col-sm-12">
+                    <div class="card__inner">
+                        <div class="card__wrap card__wrap_big">
+                            <img class="card__img" src="./images/dist/team/person-2.jpg" alt="">
+                        </div>
+                        <div class="card__overlay">
+                            <ul class="card__social-list">
+                                <li class="card__social-item">
+                                    <a class="card__social-link" href="#"><svg width="42" height="42"
+                                            viewBox="0 0 42 42" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <rect width="42" height="42" fill="#F9EFCF" />
+                                            <path
+                                                d="M23.4448 36.7448V22.4018H28.2836L29.0028 16.7861H23.4448V13.2091C23.4448 11.5886 23.8963 10.4791 26.2221 10.4791H29.1691V5.4723C27.7352 5.31864 26.2939 5.24444 24.8518 5.25005C20.5748 5.25005 17.6383 7.86105 17.6383 12.6543V16.7756H12.8311V22.3913H17.6488V36.7448H23.4448Z"
+                                                fill="#F38281" />
+                                        </svg>
+                                    </a>
+                                </li>
+                                <li class="card__social-item">
+                                    <a class="card__social-link" href="#"><svg width="42" height="42"
+                                            viewBox="0 0 42 42" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <rect width="42" height="42" fill="#F9EFCF" />
+                                            <path
+                                                d="M34.9913 11.704C36.56 10.7661 37.7338 9.2894 38.2935 7.54948C36.8194 8.42417 35.2066 9.0403 33.5248 9.37123C32.3905 8.17135 30.893 7.37784 29.2632 7.11304C27.6334 6.84823 25.9618 7.12683 24.506 7.90588C23.0502 8.68493 21.891 9.92119 21.2071 11.4241C20.5233 12.927 20.3527 14.6131 20.7218 16.2225C17.7361 16.0726 14.8152 15.2965 12.1489 13.9447C9.48256 12.5928 7.13029 10.6953 5.24478 8.37548C4.28589 10.0294 3.99247 11.9863 4.42411 13.8487C4.85575 15.7112 5.98009 17.3395 7.56878 18.403C6.37652 18.3647 5.2107 18.0418 4.16853 17.4615V17.556C4.16886 19.2902 4.76901 20.9709 5.86719 22.3131C6.96537 23.6553 8.49397 24.5763 10.1938 24.92C9.08789 25.2209 7.92789 25.2652 6.80228 25.0495C7.28305 26.541 8.21751 27.8453 9.47524 28.7802C10.733 29.7151 12.2512 30.234 13.818 30.2645C11.1577 32.3525 7.87236 33.4848 4.49053 33.4792C3.89028 33.4792 3.29178 33.4442 2.69678 33.376C6.131 35.5827 10.1279 36.754 14.21 36.75C17.0216 36.7693 19.809 36.2297 22.4102 35.1626C25.0115 34.0956 27.3748 32.5222 29.3628 30.534C31.3508 28.5458 32.924 26.1824 33.9909 23.581C35.0577 20.9797 35.5971 18.1923 35.5775 15.3807C35.5775 15.0552 35.5705 14.7315 35.5548 14.4095C37.0256 13.3466 38.295 12.0298 39.3033 10.521C37.933 11.1283 36.4796 11.5271 34.9913 11.704Z"
+                                                fill="#F38281" />
+                                        </svg></a>
+                                </li>
+                                <li class="card__social-item">
+                                    <a class="card__social-link" href="#"><svg width="42" height="42"
+                                            viewBox="0 0 42 42" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <rect width="42" height="42" fill="#F9EFCF" />
+                                            <path
+                                                d="M18.6725 26.4197C17.787 31.1902 16.709 35.7647 13.51 38.1535C12.5248 30.9435 14.9608 25.5272 16.0913 19.7785C14.1628 16.436 16.324 9.70721 20.391 11.3645C25.396 13.405 16.0563 23.793 22.3265 25.0915C28.8733 26.446 31.5473 13.3962 27.4873 9.15071C21.6213 3.02396 10.4125 9.01246 11.7915 17.7852C12.1275 19.9307 14.2783 20.5817 12.6508 23.5427C8.89704 22.6835 7.77704 19.635 7.92229 15.5697C8.15329 8.91971 13.727 4.26121 19.3165 3.61721C26.3865 2.80171 33.0208 6.28946 33.936 13.1372C34.9685 20.8652 30.7458 29.2372 23.1875 28.6335C21.1383 28.4707 20.2773 27.426 18.6725 26.4197Z"
+                                                fill="#F38281" />
+                                        </svg></a>
+                                </li>
+                                <li class="card__social-item">
+                                    <a class="card__social-link" href="#"><svg width="42" height="42"
+                                            viewBox="0 0 42 42" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <rect width="42" height="42" fill="#F9EFCF" />
+                                            <path
+                                                d="M21.0034 36.8215C16.6984 36.8215 16.1909 36.7988 14.5109 36.7253C13.2008 36.6822 11.9077 36.4159 10.6872 35.9378C9.64273 35.5313 8.69423 34.9121 7.9019 34.1195C7.10957 33.3269 6.49073 32.3781 6.08467 31.3335C5.62495 30.1086 5.377 28.8144 5.35142 27.5063C5.25342 25.8298 5.25342 25.2803 5.25342 21.0085C5.25342 16.6913 5.27617 16.1873 5.35142 14.516C5.37756 13.2097 5.6255 11.9173 6.08467 10.694C6.49026 9.64813 7.10952 8.69831 7.90291 7.90522C8.69629 7.11214 9.64635 6.49324 10.6924 6.08804C11.915 5.6264 13.2078 5.3778 14.5144 5.35304C16.1857 5.25854 16.7352 5.25854 21.0034 5.25854C25.3434 5.25854 25.8422 5.28129 27.4959 5.35304C28.8049 5.37754 30.1034 5.62604 31.3284 6.08804C32.3742 6.49371 33.324 7.11278 34.1174 7.9058C34.9107 8.69882 35.5301 9.64841 35.9362 10.694C36.4034 11.9365 36.6537 13.249 36.6729 14.5738C36.7709 16.2503 36.7709 16.798 36.7709 21.068C36.7709 25.338 36.7464 25.898 36.6729 27.5553C36.6468 28.8646 36.3982 30.16 35.9379 31.386C35.5308 32.4314 34.9108 33.3806 34.1173 34.1735C33.3238 34.9665 32.374 35.5857 31.3284 35.992C30.1034 36.4505 28.8102 36.699 27.5029 36.7253C25.8317 36.8215 25.2839 36.8215 21.0034 36.8215ZM20.9439 8.02879C16.6634 8.02879 16.2189 8.04979 14.5477 8.12504C13.5496 8.1381 12.5611 8.32218 11.6252 8.66929C10.9425 8.93095 10.3223 9.33274 9.8045 9.84876C9.28666 10.3648 8.88271 10.9836 8.61867 11.6653C8.26867 12.6103 8.08492 13.6095 8.07442 14.6175C7.98167 16.3133 7.98167 16.7578 7.98167 21.0085C7.98167 25.2085 7.99742 25.7178 8.07442 27.403C8.09017 28.4005 8.27392 29.3893 8.61867 30.3255C9.15417 31.7028 10.2462 32.7913 11.6269 33.3198C12.5616 33.6691 13.5499 33.8532 14.5477 33.864C16.2417 33.962 16.6879 33.962 20.9439 33.962C25.2367 33.962 25.6812 33.941 27.3384 33.864C28.3366 33.852 29.3253 33.6679 30.2609 33.3198C30.9399 33.0561 31.5566 32.6541 32.0718 32.1392C32.587 31.6243 32.9894 31.0079 33.2534 30.329C33.6034 29.384 33.7872 28.383 33.7977 27.375H33.8169C33.8922 25.702 33.8922 25.2558 33.8922 20.9805C33.8922 16.7053 33.8729 16.2555 33.7977 14.5843C33.7818 13.5876 33.5978 12.6007 33.2534 11.6653C32.99 10.9855 32.5878 10.368 32.0726 9.85221C31.5574 9.33639 30.9404 8.93353 30.2609 8.66929C29.3247 8.31929 28.3359 8.1373 27.3384 8.12504C25.6462 8.0288 25.2034 8.02879 20.9439 8.02879ZM21.0034 29.0918C19.4032 29.0928 17.8386 28.6193 16.5075 27.731C15.1764 26.8428 14.1386 25.5797 13.5254 24.1016C12.9122 22.6235 12.7512 20.9967 13.0626 19.4271C13.374 17.8574 14.144 16.4154 15.275 15.2834C16.4061 14.1513 17.8475 13.3801 19.4168 13.0673C20.9862 12.7546 22.6131 12.9142 24.0917 13.5261C25.5704 14.138 26.8343 15.1747 27.7237 16.505C28.6132 17.8353 29.0881 19.3995 29.0884 20.9998C29.0856 23.1439 28.2332 25.1994 26.7177 26.7162C25.2023 28.2329 23.1475 29.0872 21.0034 29.0918ZM21.0034 15.7463C19.9651 15.7463 18.95 16.0542 18.0867 16.6311C17.2233 17.208 16.5504 18.0279 16.153 18.9872C15.7557 19.9465 15.6517 21.0021 15.8543 22.0205C16.0569 23.0389 16.5569 23.9744 17.2911 24.7086C18.0253 25.4428 18.9608 25.9428 19.9792 26.1454C20.9976 26.348 22.0532 26.244 23.0125 25.8467C23.9718 25.4493 24.7918 24.7764 25.3686 23.913C25.9455 23.0497 26.2534 22.0346 26.2534 20.9963C26.2502 19.6049 25.696 18.2714 24.7122 17.2876C23.7283 16.3037 22.3948 15.7495 21.0034 15.7463ZM29.4034 14.4985C29.1557 14.4976 28.9105 14.4479 28.682 14.3523C28.4535 14.2566 28.246 14.1169 28.0715 13.9411C27.719 13.586 27.5221 13.1054 27.5239 12.605C27.5258 12.1047 27.7263 11.6256 28.0814 11.2731C28.4365 10.9207 28.9171 10.7237 29.4174 10.7255C29.9177 10.7274 30.3968 10.9279 30.7493 11.283C31.1018 11.6381 31.2988 12.1187 31.2969 12.619C31.2951 13.1194 31.0945 13.5985 30.7394 13.951C30.3843 14.3034 29.9037 14.5004 29.4034 14.4985Z"
+                                                fill="#F38281" />
+                                        </svg>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="card__desc">
+                        <p class="card__autor-name">Zain Calzoni</p>
+                        <p class="card__autor-position">designer</p>
+                    </div>
+                </div>
+                <div class="team__card card col-4 col-lg-6 col-sm-12">
+                    <div class="card__inner">
+                        <div class="card__wrap card__wrap_big">
+                            <img class="card__img" src="./images/dist/team/person-3.jpg" alt="">
+                        </div>
+                        <div class="card__overlay">
+                            <ul class="card__social-list">
+                                <li class="card__social-item">
+                                    <a class="card__social-link" href="#"><svg width="42" height="42"
+                                            viewBox="0 0 42 42" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <rect width="42" height="42" fill="#F9EFCF" />
+                                            <path
+                                                d="M23.4448 36.7448V22.4018H28.2836L29.0028 16.7861H23.4448V13.2091C23.4448 11.5886 23.8963 10.4791 26.2221 10.4791H29.1691V5.4723C27.7352 5.31864 26.2939 5.24444 24.8518 5.25005C20.5748 5.25005 17.6383 7.86105 17.6383 12.6543V16.7756H12.8311V22.3913H17.6488V36.7448H23.4448Z"
+                                                fill="#F38281" />
+                                        </svg>
+                                    </a>
+                                </li>
+                                <li class="card__social-item">
+                                    <a class="card__social-link" href="#"><svg width="42" height="42"
+                                            viewBox="0 0 42 42" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <rect width="42" height="42" fill="#F9EFCF" />
+                                            <path
+                                                d="M34.9913 11.704C36.56 10.7661 37.7338 9.2894 38.2935 7.54948C36.8194 8.42417 35.2066 9.0403 33.5248 9.37123C32.3905 8.17135 30.893 7.37784 29.2632 7.11304C27.6334 6.84823 25.9618 7.12683 24.506 7.90588C23.0502 8.68493 21.891 9.92119 21.2071 11.4241C20.5233 12.927 20.3527 14.6131 20.7218 16.2225C17.7361 16.0726 14.8152 15.2965 12.1489 13.9447C9.48256 12.5928 7.13029 10.6953 5.24478 8.37548C4.28589 10.0294 3.99247 11.9863 4.42411 13.8487C4.85575 15.7112 5.98009 17.3395 7.56878 18.403C6.37652 18.3647 5.2107 18.0418 4.16853 17.4615V17.556C4.16886 19.2902 4.76901 20.9709 5.86719 22.3131C6.96537 23.6553 8.49397 24.5763 10.1938 24.92C9.08789 25.2209 7.92789 25.2652 6.80228 25.0495C7.28305 26.541 8.21751 27.8453 9.47524 28.7802C10.733 29.7151 12.2512 30.234 13.818 30.2645C11.1577 32.3525 7.87236 33.4848 4.49053 33.4792C3.89028 33.4792 3.29178 33.4442 2.69678 33.376C6.131 35.5827 10.1279 36.754 14.21 36.75C17.0216 36.7693 19.809 36.2297 22.4102 35.1626C25.0115 34.0956 27.3748 32.5222 29.3628 30.534C31.3508 28.5458 32.924 26.1824 33.9909 23.581C35.0577 20.9797 35.5971 18.1923 35.5775 15.3807C35.5775 15.0552 35.5705 14.7315 35.5548 14.4095C37.0256 13.3466 38.295 12.0298 39.3033 10.521C37.933 11.1283 36.4796 11.5271 34.9913 11.704Z"
+                                                fill="#F38281" />
+                                        </svg></a>
+                                </li>
+                                <li class="card__social-item">
+                                    <a class="card__social-link" href="#"><svg width="42" height="42"
+                                            viewBox="0 0 42 42" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <rect width="42" height="42" fill="#F9EFCF" />
+                                            <path
+                                                d="M18.6725 26.4197C17.787 31.1902 16.709 35.7647 13.51 38.1535C12.5248 30.9435 14.9608 25.5272 16.0913 19.7785C14.1628 16.436 16.324 9.70721 20.391 11.3645C25.396 13.405 16.0563 23.793 22.3265 25.0915C28.8733 26.446 31.5473 13.3962 27.4873 9.15071C21.6213 3.02396 10.4125 9.01246 11.7915 17.7852C12.1275 19.9307 14.2783 20.5817 12.6508 23.5427C8.89704 22.6835 7.77704 19.635 7.92229 15.5697C8.15329 8.91971 13.727 4.26121 19.3165 3.61721C26.3865 2.80171 33.0208 6.28946 33.936 13.1372C34.9685 20.8652 30.7458 29.2372 23.1875 28.6335C21.1383 28.4707 20.2773 27.426 18.6725 26.4197Z"
+                                                fill="#F38281" />
+                                        </svg></a>
+                                </li>
+                                <li class="card__social-item">
+                                    <a class="card__social-link" href="#"><svg width="42" height="42"
+                                            viewBox="0 0 42 42" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <rect width="42" height="42" fill="#F9EFCF" />
+                                            <path
+                                                d="M21.0034 36.8215C16.6984 36.8215 16.1909 36.7988 14.5109 36.7253C13.2008 36.6822 11.9077 36.4159 10.6872 35.9378C9.64273 35.5313 8.69423 34.9121 7.9019 34.1195C7.10957 33.3269 6.49073 32.3781 6.08467 31.3335C5.62495 30.1086 5.377 28.8144 5.35142 27.5063C5.25342 25.8298 5.25342 25.2803 5.25342 21.0085C5.25342 16.6913 5.27617 16.1873 5.35142 14.516C5.37756 13.2097 5.6255 11.9173 6.08467 10.694C6.49026 9.64813 7.10952 8.69831 7.90291 7.90522C8.69629 7.11214 9.64635 6.49324 10.6924 6.08804C11.915 5.6264 13.2078 5.3778 14.5144 5.35304C16.1857 5.25854 16.7352 5.25854 21.0034 5.25854C25.3434 5.25854 25.8422 5.28129 27.4959 5.35304C28.8049 5.37754 30.1034 5.62604 31.3284 6.08804C32.3742 6.49371 33.324 7.11278 34.1174 7.9058C34.9107 8.69882 35.5301 9.64841 35.9362 10.694C36.4034 11.9365 36.6537 13.249 36.6729 14.5738C36.7709 16.2503 36.7709 16.798 36.7709 21.068C36.7709 25.338 36.7464 25.898 36.6729 27.5553C36.6468 28.8646 36.3982 30.16 35.9379 31.386C35.5308 32.4314 34.9108 33.3806 34.1173 34.1735C33.3238 34.9665 32.374 35.5857 31.3284 35.992C30.1034 36.4505 28.8102 36.699 27.5029 36.7253C25.8317 36.8215 25.2839 36.8215 21.0034 36.8215ZM20.9439 8.02879C16.6634 8.02879 16.2189 8.04979 14.5477 8.12504C13.5496 8.1381 12.5611 8.32218 11.6252 8.66929C10.9425 8.93095 10.3223 9.33274 9.8045 9.84876C9.28666 10.3648 8.88271 10.9836 8.61867 11.6653C8.26867 12.6103 8.08492 13.6095 8.07442 14.6175C7.98167 16.3133 7.98167 16.7578 7.98167 21.0085C7.98167 25.2085 7.99742 25.7178 8.07442 27.403C8.09017 28.4005 8.27392 29.3893 8.61867 30.3255C9.15417 31.7028 10.2462 32.7913 11.6269 33.3198C12.5616 33.6691 13.5499 33.8532 14.5477 33.864C16.2417 33.962 16.6879 33.962 20.9439 33.962C25.2367 33.962 25.6812 33.941 27.3384 33.864C28.3366 33.852 29.3253 33.6679 30.2609 33.3198C30.9399 33.0561 31.5566 32.6541 32.0718 32.1392C32.587 31.6243 32.9894 31.0079 33.2534 30.329C33.6034 29.384 33.7872 28.383 33.7977 27.375H33.8169C33.8922 25.702 33.8922 25.2558 33.8922 20.9805C33.8922 16.7053 33.8729 16.2555 33.7977 14.5843C33.7818 13.5876 33.5978 12.6007 33.2534 11.6653C32.99 10.9855 32.5878 10.368 32.0726 9.85221C31.5574 9.33639 30.9404 8.93353 30.2609 8.66929C29.3247 8.31929 28.3359 8.1373 27.3384 8.12504C25.6462 8.0288 25.2034 8.02879 20.9439 8.02879ZM21.0034 29.0918C19.4032 29.0928 17.8386 28.6193 16.5075 27.731C15.1764 26.8428 14.1386 25.5797 13.5254 24.1016C12.9122 22.6235 12.7512 20.9967 13.0626 19.4271C13.374 17.8574 14.144 16.4154 15.275 15.2834C16.4061 14.1513 17.8475 13.3801 19.4168 13.0673C20.9862 12.7546 22.6131 12.9142 24.0917 13.5261C25.5704 14.138 26.8343 15.1747 27.7237 16.505C28.6132 17.8353 29.0881 19.3995 29.0884 20.9998C29.0856 23.1439 28.2332 25.1994 26.7177 26.7162C25.2023 28.2329 23.1475 29.0872 21.0034 29.0918ZM21.0034 15.7463C19.9651 15.7463 18.95 16.0542 18.0867 16.6311C17.2233 17.208 16.5504 18.0279 16.153 18.9872C15.7557 19.9465 15.6517 21.0021 15.8543 22.0205C16.0569 23.0389 16.5569 23.9744 17.2911 24.7086C18.0253 25.4428 18.9608 25.9428 19.9792 26.1454C20.9976 26.348 22.0532 26.244 23.0125 25.8467C23.9718 25.4493 24.7918 24.7764 25.3686 23.913C25.9455 23.0497 26.2534 22.0346 26.2534 20.9963C26.2502 19.6049 25.696 18.2714 24.7122 17.2876C23.7283 16.3037 22.3948 15.7495 21.0034 15.7463ZM29.4034 14.4985C29.1557 14.4976 28.9105 14.4479 28.682 14.3523C28.4535 14.2566 28.246 14.1169 28.0715 13.9411C27.719 13.586 27.5221 13.1054 27.5239 12.605C27.5258 12.1047 27.7263 11.6256 28.0814 11.2731C28.4365 10.9207 28.9171 10.7237 29.4174 10.7255C29.9177 10.7274 30.3968 10.9279 30.7493 11.283C31.1018 11.6381 31.2988 12.1187 31.2969 12.619C31.2951 13.1194 31.0945 13.5985 30.7394 13.951C30.3843 14.3034 29.9037 14.5004 29.4034 14.4985Z"
+                                                fill="#F38281" />
+                                        </svg>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="card__desc">
+                        <p class="card__autor-name">Charlie George</p>
+                        <p class="card__autor-position">Charlie George</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- end TEAM================================================================== -->
+
+    <!-- start PARTNERS ==================================================================-->
+    <section class="partners">
+        <div class="container">
+            <div class="partners__row row">
+                <div class="partners__card col-sm-6">
+                    <a class="partners__card-link" href="#"><img class="partners__img"
+                            src="./images/dist/partners/partners-icon-1.svg" alt=""></a>
+                </div>
+                <div class="partners__card col-sm-6">
+                    <a class="partners__card-link" href="#"><img class="partners__img"
+                            src="./images/dist/partners/partners-icon-2.svg" alt=""></a>
+                </div>
+                <div class="partners__card col-sm-12">
+                    <a class="partners__card-link" href="#"><img class="partners__img"
+                            src="./images/dist/partners/partners-icon-6.svg" alt=""></a>
+                </div>
+                <div class="partners__card col-sm-6">
+                    <a class="partners__card-link" href="#"><img class="partners__img"
+                            src="./images/dist/partners/partners-icon-1.svg" alt=""></a>
+                </div>
+                <div class="partners__card col-sm-6">
+                    <a class="partners__card-link" href="#"><img class="partners__img"
+                            src="./images/dist/partners/partners-icon-2.svg" alt=""></a>
+                </div>
+                <div class="partners__card col-sm-12">
+                    <a class="partners__card-link" href="#"><img class="partners__img"
+                            src="./images/dist/partners/partners-icon-6.svg" alt=""></a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- end PARTNERS================================================================== -->
+
+    <!-- start WORK ==================================================================-->
+    <section class="work" id="work">
+        <div class="section-head">
+            <p class="section-head__subtitle">What we do</p>
+            <h2 class="section-head__title">some of our work</h2>
+        </div>
+        <p class="work__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Eu facilisis sed venenatis
+            lacus.
+            Eget sit ridiculus facilisi amet. Dis sapien ipsum enim dui fermentum viverra dolor sit. Aliquet congue
+            sit
+            fermentum risus feugiat.</p>
+        <div class="work__gallery">
+            <div class="work__item">
                     <img class="work__img" src="./images/dist/work/work-1.jpg" alt="">
-                    <div class="work__overlay">
-                        <img class="work__overlay-img" src="./images/dist/work/prize-icon.svg" alt="prize">
-                        <p class="work__overlay-title">creatively design</p>
-                        <p class="work__overlay-text">Lorem ipsum dolor sit</p>
-                    </div>
-                </div>
-                <div class="work__item">
-                    <img class="work__img" src="./images/dist/work/work-2.jpg" alt="">
-                    <div class="work__overlay">
-                        <img class="work__overlay-img" src="./images/dist/work/prize-icon.svg" alt="prize">
-                        <p class="work__overlay-title">creatively design</p>
-                        <p class="work__overlay-text">Lorem ipsum dolor sit</p>
-                    </div>
-                </div>
-                <div class="work__item work__item_big">
-                    <img class="work__img" src="./images/dist/work/work-3.jpg" alt="">
-                    <div class="work__overlay">
-                        <img class="work__overlay-img" src="./images/dist/work/prize-icon.svg" alt="prize">
-                        <p class="work__overlay-title">creatively design</p>
-                        <p class="work__overlay-text">Lorem ipsum dolor sit</p>
-                    </div>
-                </div>
-                <div class="work__item">
-                    <img class="work__img" src="./images/dist/work/work-4.jpg" alt="">
-                    <div class="work__overlay">
-                        <img class="work__overlay-img" src="./images/dist/work/prize-icon.svg" alt="prize">
-                        <p class="work__overlay-title">creatively design</p>
-                        <p class="work__overlay-text">Lorem ipsum dolor sit</p>
-                    </div>
-                </div>
-                <div class="work__item">
-                    <img class="work__img" src="./images/dist/work/work-5.jpg" alt="">
-                    <div class="work__overlay">
-                        <img class="work__overlay-img" src="./images/dist/work/prize-icon.svg" alt="prize">
-                        <p class="work__overlay-title">creatively design</p>
-                        <p class="work__overlay-text">Lorem ipsum dolor sit</p>
-                    </div>
-                </div>
-                <div class="work__item">
-                    <img class="work__img" src="./images/dist/work/work-6.jpg" alt="">
-                    <div class="work__overlay">
-                        <img class="work__overlay-img" src="./images/dist/work/prize-icon.svg" alt="prize">
-                        <p class="work__overlay-title">creatively design</p>
-                        <p class="work__overlay-text">Lorem ipsum dolor sit</p>
-                    </div>
-                </div>
-                <div class="work__item">
-                    <img class="work__img" src="./images/dist/work/work-7.jpg" alt="">
-                    <div class="work__overlay">
-                        <img class="work__overlay-img" src="./images/dist/work/prize-icon.svg" alt="prize">
-                        <p class="work__overlay-title">creatively design</p>
-                        <p class="work__overlay-text">Lorem ipsum dolor sit</p>
-                    </div>
+                <div class="work__overlay">
+                    <img class="work__overlay-img" src="./images/dist/work/prize-icon.svg" alt="prize">
+                    <p class="work__overlay-title">creatively design</p>
+                    <p class="work__overlay-text">Lorem ipsum dolor sit</p>
                 </div>
             </div>
+            <div class="work__item">
+                    <img class="work__img" src="./images/dist/work/work-2.jpg" alt="">
+                <div class="work__overlay">
+                    <img class="work__overlay-img" src="./images/dist/work/prize-icon.svg" alt="prize">
+                    <p class="work__overlay-title">creatively design</p>
+                    <p class="work__overlay-text">Lorem ipsum dolor sit</p>
+                </div>
+            </div>
+            <div class="work__item work__item_vertical">
+                    <img class="work__img" src="./images/dist/work/work-3.jpg" alt="">
+                <div class="work__overlay">
+                    <img class="work__overlay-img" src="./images/dist/work/prize-icon.svg" alt="prize">
+                    <p class="work__overlay-title">creatively design</p>
+                    <p class="work__overlay-text">Lorem ipsum dolor sit</p>
+                </div>
+            </div>
+            <div class="work__item">
+                    <img class="work__img" src="./images/dist/work/work-4.jpg" alt="">
+                <div class="work__overlay">
+                    <img class="work__overlay-img" src="./images/dist/work/prize-icon.svg" alt="prize">
+                    <p class="work__overlay-title">creatively design</p>
+                    <p class="work__overlay-text">Lorem ipsum dolor sit</p>
+                </div>
+            </div>
+            <div class="work__item">
+                    <img class="work__img" src="./images/dist/work/work-5.jpg" alt="">
+                <div class="work__overlay">
+                    <img class="work__overlay-img" src="./images/dist/work/prize-icon.svg" alt="prize">
+                    <p class="work__overlay-title">creatively design</p>
+                    <p class="work__overlay-text">Lorem ipsum dolor sit</p>
+                </div>
+            </div>
+            <div class="work__item work__item_horizontal">
+                    <img class="work__img" src="./images/dist/work/work-6.jpg" alt="">
+                <div class="work__overlay">
+                    <img class="work__overlay-img" src="./images/dist/work/prize-icon.svg" alt="prize">
+                    <p class="work__overlay-title">creatively design</p>
+                    <p class="work__overlay-text">Lorem ipsum dolor sit</p>
+                </div>
+            </div>
+            <div class="work__item">
+                    <img class="work__img" src="./images/dist/work/work-7.jpg" alt="">
+                <div class="work__overlay">
+                    <img class="work__overlay-img" src="./images/dist/work/prize-icon.svg" alt="prize">
+                    <p class="work__overlay-title">creatively design</p>
+                    <p class="work__overlay-text">Lorem ipsum dolor sit</p>
+                </div>
+            </div>
+        </div>
     </section>
     <!-- end WORK ==================================================================-->
     <!-- start REVIEWS ==================================================================-->
-    <section class="reviews reviews_light">
-        <div class="container">
-            <div class="splide reviews-slider reviews-slider_light" aria-labelledby="carousel-heading">
-                <div class="splide__track">
-                    <ul class="splide__list">
-                        <li class="splide__slide reviews-slide reviews-slide_light">
-                            <img class="reviews-slide__icon" src="./images/dist/reviews/man-icon.svg" alt="">
-                            <div class="reviews-slide__content">
-                                <p class="reviews-slide__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                                    Neque nec diam platea ullamcorper feugiat amet. Id aliquet vehicula feugiat arcu
-                                    arcu nulla ornare. Sed amet venenatis, massa sit.</p>
-                                <p class="reviews-slide__autor">James Philips</p>
-                            </div>
-                        </li>
-                        <li class="splide__slide reviews-slide">
-                            <img class="reviews-slide__icon" src="./images/dist/reviews/man-icon.svg" alt="">
-                            <div class="reviews-slide__content">
-                                <p class="reviews-slide__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                                    Neque nec diam platea ullamcorper feugiat amet. Id aliquet
-                                    arcu nulla ornare. Sed amet venenatis, massa sit. Lorem ipsum dolor sit amet
-                                    consectetur adipisicing elit. Vero, minima!</p>
-                                <p class="reviews-slide__autor">Maria Dolores</p>
-                            </div>
-                        </li>
-                        <li class="splide__slide reviews-slide">
-                            <img class="reviews-slide__icon" src="./images/dist/reviews/man-icon.svg" alt="">
-                            <div class="reviews-slide__content">
-                                <p class="reviews-slide__text">Lorem ipsum dolor sit amet.</p>
-                                <p class="reviews-slide__autor">Dan Slim</p>
-                            </div>
-                        </li>
-                    </ul>
+    <section class="author-reviews">
+        <div class="author-reviews__inner">
+            <div class="container">
+                <div class="splide reviews-slider" id="author-reviews" aria-labelledby="carousel-heading">
+                    <div class="splide__track">
+                        <ul class="splide__list">
+                            <li class="splide__slide reviews-slide reviews-slide_column">
+                                <img class="reviews-slide__icon reviews-slide__icon-author"
+                                    src="./images/dist/reviews/man-icon.svg" alt="">
+                                <div class="reviews-slide__content">
+                                    <p class="reviews-slide__text">Lorem ipsum dolor sit amet, consectetur adipiscing
+                                        elit.
+                                        Neque nec diam platea ullamcorper feugiat amet. Id aliquet vehicula feugiat arcu
+                                        arcu nulla ornare. Sed amet venenatis, massa sit.</p>
+                                    <p class="reviews-slide__autor">James Philips</p>
+                                </div>
+                            </li>
+                            <li class="splide__slide reviews-slide">
+                                <img class="reviews-slide__icon reviews-slide__icon-author"
+                                    src="./images/dist/reviews/man-icon.svg" alt="">
+                                <div class="reviews-slide__content">
+                                    <p class="reviews-slide__text">Lorem ipsum dolor sit amet, consectetur adipiscing
+                                        elit.
+                                        Neque nec diam platea ullamcorper feugiat amet. Id aliquet
+                                        arcu nulla ornare. Sed amet venenatis, massa sit. Lorem ipsum dolor sit amet
+                                        consectetur adipisicing elit. Vero, minima!</p>
+                                    <p class="reviews-slide__autor">Maria Dolores</p>
+                                </div>
+                            </li>
+                            <li class="splide__slide reviews-slide">
+                                <img class="reviews-slide__icon reviews-slide__icon-author"
+                                    src="./images/dist/reviews/man-icon.svg" alt="">
+                                <div class="reviews-slide__content">
+                                    <p class="reviews-slide__text">Lorem ipsum dolor sit amet.</p>
+                                    <p class="reviews-slide__autor">Dan Slim</p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </div>
@@ -419,7 +765,7 @@
                 </div>
             </div>
             <div class="clients__row row">
-                <div class="clients__card col-6">
+                <div class="clients__card col-6 col-lg-12">
                     <img class="clients__autor-icon" src="./images/dist/clients/phillip.jpg" loading="lazy"
                         alt="Phillip">
                     <div class="clients__autor-feedback">
@@ -430,7 +776,7 @@
                             mauris est leo cursus.</p>
                     </div>
                 </div>
-                <div class="clients__card col-6">
+                <div class="clients__card col-6 col-lg-12">
                     <img class="clients__autor-icon" src="./images/dist/clients/Paityn.jpg" loading="lazy" alt="Paityn">
                     <div class="clients__autor-feedback">
                         <p class="clients__autor-name">Paityn Press</p>
@@ -440,7 +786,7 @@
                             mauris est leo cursus.</p>
                     </div>
                 </div>
-                <div class="clients__card col-6">
+                <div class="clients__card col-6 col-lg-12">
                     <img class="clients__autor-icon" src="./images/dist/clients/dulce.jpg" loading="lazy" alt="Dulce">
                     <div class="clients__autor-feedback">
                         <p class="clients__autor-name">Dulce Gouse</p>
@@ -450,7 +796,7 @@
                             mauris est leo cursus.</p>
                     </div>
                 </div>
-                <div class="clients__card col-6">
+                <div class="clients__card col-6 col-lg-12">
                     <img class="clients__autor-icon" src="./images/dist/clients/zaire.jpg" loading="lazy" alt="Zaire">
                     <div class="clients__autor-feedback">
                         <p class="clients__autor-name">Zaire Schleifer</p>
@@ -467,14 +813,14 @@
 
 
     <!-- start BLOG ==================================================================-->
-    <section class="blog">
+    <section class="blog" id="blog">
         <div class="container">
             <div class="section-head blog__head">
                 <div class="section-head__subtitle">Our Stories</div>
                 <div class="section-head__title">Latest blog</div>
             </div>
             <div class="blog__row row">
-                <div class="blog__card col-4 col-md-6 col-xs-12">
+                <div class="blog__card col-4 col-lg-6 col-sm-12">
                     <div class="blog__card-head">
                         <div class="blog__img-wrap">
                             <a href="/"><img class="blog__img" src="./images/dist/blog/news.jpg" alt="news"></a>
@@ -488,16 +834,16 @@
                         cursus.</p>
                     <div class="blog__info-panel">
                         <div class="blog__info-block">
-                            <img class="blog__info-img" src="./images/dist/blog/views.svg" alt="views">
+                            <img class="blog__info-img" src="./images/dist/svg-icons/views.svg" alt="views">
                             <p class="blog__view-counter">542</p>
                         </div>
                         <div class="blog__info-block">
-                            <img class="blog__info-img" src="./images/dist/blog/comments.svg" alt="comments">
+                            <img class="blog__info-img" src="./images/dist/svg-icons/comments.svg" alt="comments">
                             <p class="blog__comments-counter">17</p>
                         </div>
                     </div>
                 </div>
-                <div class="blog__card col-4 col-md-6 col-xs-12">
+                <div class="blog__card col-4 col-lg-6 col-sm-12">
                     <div class="blog__card-head">
                         <div class="blog__img-wrap">
                             <a href="/"><img class="blog__img" src="./images/dist/blog/girl.jpg" alt="girl"></a>
@@ -511,16 +857,16 @@
                         cursus.</p>
                     <div class="blog__info-panel">
                         <div class="blog__info-block">
-                            <img class="blog__info-img" src="./images/dist/blog/views.svg" alt="views">
+                            <img class="blog__info-img" src="./images/dist/svg-icons/views.svg" alt="views">
                             <p class="blog__view-counter">542</p>
                         </div>
                         <div class="blog__info-block">
-                            <img class="blog__info-img" src="./images/dist/blog/comments.svg" alt="comments">
+                            <img class="blog__info-img" src="./images/dist/svg-icons/comments.svg" alt="comments">
                             <p class="blog__comments-counter">17</p>
                         </div>
                     </div>
                 </div>
-                <div class="blog__card col-4 col-md-6 col-xs-12">
+                <div class="blog__card col-4 col-lg-6 col-sm-12">
                     <div class="blog__card-head">
                         <div class="blog__img-wrap">
                             <a href="/"></a><img class="blog__img" src="./images/dist/blog/man.jpg" alt="man"></a>
@@ -534,11 +880,11 @@
                         cursus.</p>
                     <div class="blog__info-panel">
                         <div class="blog__info-block">
-                            <img class="blog__info-img" src="./images/dist/blog/views.svg" alt="views">
+                            <img class="blog__info-img" src="./images/dist/svg-icons/views.svg" alt="views">
                             <p class="blog__view-counter">542</p>
                         </div>
                         <div class="blog__info-block">
-                            <img class="blog__info-img" src="./images/dist/blog/comments.svg" alt="comments">
+                            <img class="blog__info-img" src="./images/dist/svg-icons/comments.svg" alt="comments">
                             <p class="blog__comments-counter">17</p>
                         </div>
                     </div>
@@ -549,10 +895,12 @@
 </main>
 
 <!-- start MAP ==================================================================-->
-<section class="map">
+<section class="map" id="map">
     <div class="container">
         <div class="section-head section-head_accent">
-            <a class="map__link" href="#"><img src="./images/dist/map/map-icon.svg" alt="map" class="map__img"></a>
+            <a class="section-head__link" href="#">
+                <img class="section-head__img" src="./images/dist/map/map-icon.svg" alt="map" class="map__img">
+            </a>
             <div class="section-head__title">Latest blog</div>
         </div>
     </div>
@@ -567,7 +915,7 @@
 <footer class="footer">
 	<div class="container">
 		<div class="footer__row row">
-			<div class="footer__col footer__media-col col-4 col-md-6 col-xs-12">
+			<div class="footer__col footer__media-col col-4 col-lg-6 col-sm-12">
 				<a href="" class="footer__logo-link">
 					<img class="footer__logo-img" src="./images/dist/footer/logo.svg" alt="logo">
 				</a>
@@ -632,12 +980,12 @@
 						</ul>
 					</div>
 				</div>
-				<form action="" class="footer__subscribe">
+				<form action="POST" class="footer__subscribe">
 					<input type="text" class="footer__input form-input" placeholder="Your Email">
 					<input type="submit" class="footer__send-form prime-btn" value="subscribe">
 				</form>
 			</div>
-			<div class="footer__col col-5 col-md-6 col-xs-12">
+			<div class="footer__col col-5 col-lg-6 col-sm-12">
 				<p class="footer__col-title">blogs</p>
 				<div class="footer__news">
 					<div class="news-card footer__news-card">
@@ -669,7 +1017,7 @@
 					</div>
 				</div>
 			</div>
-			<div class="footer__col col-3 col-md-5 col-xs-12">
+			<div class="footer__col col-3 col-lg-6 col-sm-12">
 				<p class="footer__col-title">instagram</p>
 				<div class="images-galery">
 					<div class="images-gallery__item">
