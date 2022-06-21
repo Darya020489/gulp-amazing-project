@@ -1,61 +1,35 @@
-/* start ABOUT ==================================================================*/
 .about {
   padding-top: 42px;
   padding-bottom: 108px;
-}
 
-.about__text {
-  margin-bottom: 58px;
-  padding: 10px 0;
-  text-align: center;
-  font-weight: 400;
-  font-size: 18px;
-  line-height: 1.2;
-}
+  @include breakpoint(xl) {
+    padding-top: 29px;
+    padding-bottom: 60px;
+  }
 
-.about__img-wrap {
-  position: relative;
-  overflow: hidden;
-  padding-bottom: 91%;
-  background: var(--blue);
-}
+  @include breakpoint(sm) {
+    padding-bottom: 44px;
+  }
 
-.about__img-wrap:first-child {
-  overflow: visible;
-}
+  &__text {
+    margin-bottom: 58px;
+    padding: 10px 0;
+    text-align: center;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 1.2;
 
-.about__overlay {
-  position: absolute;
-  bottom: 16px;
-  right: 16px;
-  width: 100%;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  background: var(--background);
-}
+    @include breakpoint(xl) {
+      margin-bottom: 49px;
+      font-size: 14px;
+    }
+  }
 
-.about__overlay-img {
-  width: 40px;
-  margin-bottom: 30px;
-}
-
-.about__overlay-text {
-  font-weight: 500;
-  font-size: 24px;
-  line-height: 28px;
-  color: var(--white);
-}
-
-.about__img {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  min-width: 100%;
-  min-height: 100%;
+  &__row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
 }
 
 /* end ABOUT ==================================================================*/

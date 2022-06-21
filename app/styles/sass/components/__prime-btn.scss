@@ -7,11 +7,14 @@
   border: none;
   color: var(--white);
   background: var(--blue);
-}
 
-@media (max-width: 1200px) {
-  .prime-btn {
-    padding: 10px;
+  @include breakpoint(xl) {
+  padding: 10px;
     font-size: 14px;
   }
+
+  @include breakpoint(sm) {
+  width: 100%;
+  }
 }
+

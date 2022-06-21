@@ -11,17 +11,26 @@
   --blue: #95e1d3;
   --grey: #c6cbcd;
   --light-grey: #f8f8f8;
+  --light-yellow: #f9efcf;
   --peach: #f4bf87;
-  --secondary-color: #A9AFB1;
+  --secondary-color: #a9afb1;
   --content-width: 1170px;
   --mobile-padding: 16px;
   --gutter: 15px;
   --margin: 15px;
 }
 
-@media (max-width: 1200px) {
+// костыль
+// .splide__list {
+//   transition: 0.3s;
+
+// &:hover {
+//   transition: none;
+// }
+// }
+
+@include breakpoint(lg) {
   :root {
-    --content-width: 992px;
     --gutter: 10px;
   }
 }
@@ -36,6 +45,12 @@ html {
   font-size: 18px;
   line-height: 1.2;
   color: var(--black);
+  // -webkit-appearance: none;
+}
+
+html.dark {
+  background-color: rgba(49, 51, 65, 0.75);
+  color: var(--blue);
 }
 
 button {
@@ -52,7 +67,7 @@ body {
 }
 
 p {
-margin-block-start: 0em;
-margin-block-end: 0em;
+  margin-block-start: 0em;
+  margin-block-end: 0em;
 }
 /* end DEFAULT ==================================================================*/

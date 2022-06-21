@@ -6,15 +6,17 @@
   font-size: 18px;
   background: var(--white);
   border: 1px solid var(--grey);
-}
 
-@media (max-width: 1200px) {
-  .form-input {
+  @include breakpoint(xl) {
     padding: 10px;
     font-size: 14px;
   }
-}
 
-.form-input::placeholder {
-  color: var(--grey);
+  @include breakpoint(sm) {
+  margin-bottom: 24px;
+  }
+
+  &::placeholder {
+    color: var(--grey);
+  }
 }

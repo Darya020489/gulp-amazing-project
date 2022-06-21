@@ -1,7 +1,6 @@
 /* start PROMO ==================================================================*/
 .promo {
   padding-top: 177px;
-  padding-bottom: 50px;
   min-height: 100vh;
   background-image: linear-gradient(
       360deg,
@@ -14,62 +13,15 @@
   background-position: center center;
   text-align: center;
   color: var(--white);
-}
 
-@media (max-width: 1200px) {
-  .promo {
-    padding-top: 50px;
+  @include breakpoint(xl) {
+    padding-top: 120px;
+  }
+
+  @include breakpoint(sm) {
+    padding-top: 90px;
   }
 }
 
-.promo__subtitle {
-  font-family: "Kaushan Script";
-  font-size: 64px;
-  font-weight: 400;
-  line-height: 1.5;
-}
 
-.promo__title {
-  font-family: "Montserrat", sans-serif;
-  font-style: normal;
-  font-weight: 700;
-  font-size: 144px;
-  align-items: center;
-  text-align: center;
-  text-transform: uppercase;
-  line-height: 1.2;
-}
-
-.promo__title::after {
-  content: "";
-  display: block;
-  margin: 0 auto;
-  padding-top: 44px;
-  width: 170px;
-  border-bottom: 4px solid var(--white);
-}
-
-.promo__link {
-  margin-top: 72px;
-  display: inline-block;
-  max-width: 370px;
-  text-align: center;
-  text-decoration: none;
-  font-family: "Raleway", sans-serif;
-  font-style: normal;
-  font-weight: 700;
-  font-size: 24px;
-  line-height: 1.2;
-  text-transform: uppercase;
-  padding: 25px 110px;
-  white-space: nowrap;
-  color: var(--white);
-  border: 1px solid var(--white);
-  transition: 1s;
-}
-
-.promo__link:hover {
-  background-color: var(--white);
-  color: var(--peach);
-}
 /* end PROMO ==================================================================*/

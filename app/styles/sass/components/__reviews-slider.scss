@@ -1,33 +1,70 @@
 .reviews-slider {
-    position: relative;
-    padding: 0 42px; 
+  position: relative;
+  padding: 0 90px;
 
-    &__arrow {
-        position: absolute;
-        top: 50%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        width: 42px;
-        height: 42px;
-        background: none;
-        border: none;
-        color: #C6CBCD;
-        z-index: 1;
-        
-        &:first-child {
-            left: 0;
-            transform: translatey(-50%) rotate(180deg);
-        }
-        
-        &:last-child {
-            right: 0; 
-            transform: translatey(-50%);
-        }
+  @include breakpoint(md) {
+    padding: 0 50px;
+  }
 
-        & svg path{
-            fill: #C6CBCD;
-        }
+  @include breakpoint(sm) {
+    padding: 0;
+  }
+
+  &__arrow {
+    position: absolute;
+    top: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 42px;
+    height: 100%;
+    background: none;
+    border: none;
+    color: #c6cbcd;
+    background: url(../images/dist/svg-icons/slider-arrow.svg) no-repeat center;
+    background-size: contain;
+    z-index: 1;
+
+    &:hover {
+      opacity: 0.5;
     }
 
+    &:first-child {
+      left: 0;
+      transform: translatey(-50%) rotate(180deg);
+    }
+
+    &:last-child {
+      right: 0;
+      transform: translatey(-50%);
+    }
+
+    svg {
+      display: none;
+    }
+  }
+
+  &__pagination {
+    margin-top: 25px;
+  }
+  &__pagination > li {
+    margin-right: 20px;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
+  &__pagination > li button {
+    padding: 0;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: none;
+    border: 1px solid var(--grey);
+
+    &.is-active {
+      background: var(--grey);
+    }
+  }
 }

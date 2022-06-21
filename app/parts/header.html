@@ -45,7 +45,7 @@
 				<nav class="header__nav">
 					<ul class="header__menu">
 						<li class="header__menu-item header__menu-item_has-child">
-							<a class="header__menu-link" href="#">about
+							<a class="header__menu-link" href="#about">about
 								<svg class="header__menu-img" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
 									<title />
 									<g data-name="Layer 2" id="Layer_2">
@@ -88,11 +88,11 @@
 								</li>
 							</ul>
 						</li>
-						<li class="header__menu-item"><a class="header__menu-link" href="#!">service</a></li>
+						<li class="header__menu-item"><a class="header__menu-link" href="#service">service</a></li>
 						<li class="header__menu-item header__menu-item_active"><a class="header__menu-link"
-								href="#">work</a></li>
-						<li class="header__menu-item"><a class="header__menu-link" href="#">blog</a></li>
-						<li class="header__menu-item"><a class="header__menu-link" href="#">contact</a></li>
+								href="#work">work</a></li>
+						<li class="header__menu-item"><a class="header__menu-link" href="#blog">blog</a></li>
+						<li class="header__menu-item"><a class="header__menu-link" href="#map">contact</a></li>
 						<li class="header__menu-item"><a class="header__menu-link" href="#">
 								<svg class="header__menu-img" width="24" height="24" viewBox="0 0 24 24" fill="none"
 									xmlns="http://www.w3.org/2000/svg">
@@ -124,8 +124,27 @@
 										fill="white" />
 								</svg>
 							</a></li>
+						<label class="switch">
+							<input class="switch__input" type="checkbox" name="theme" value="dark">
+							<span class="switch__slider"></span>
+						</label>
+
+
+
+
+
+						
 					</ul>
+					<div class="header__nav-close">
+						<span class="header__nav-close-line"></span>
+						<span class="header__nav-close-line"></span>
+					</div>
 				</nav>
+				<button class="burger header__burger">
+					<span class="burger__line"></span>
+					<span class="burger__line"></span>
+					<span class="burger__line"></span>
+				</button>
 			</div>
 		</div>
 	</header>

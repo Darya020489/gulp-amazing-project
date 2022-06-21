@@ -1,158 +1,152 @@
 /* start BLOG ==================================================================*/
 .blog {
   padding: 84px 0;
-}
 
-@media (max-width: 1200px) {
-  .blog {
+  @include breakpoint(xl) {
     padding: 58px 0;
   }
-}
 
-@media (max-width: 560px) {
-  .blog {
-    padding: 30px 0;
+  @include breakpoint(sm) {
+    padding-top: 29px;
+    padding-bottom: 0;
   }
-}
 
-.blog__head {
-  margin-bottom: 42px;
-}
+  &__head {
+    margin-bottom: 23px;
 
-.blog__card {
-  font-family: "Raleway", sans-serif;
-}
-
-@media (max-width: 992px) {
-  .blog__card {
-    margin-bottom: 50px;
+    @include breakpoint(xl) {
+      margin-bottom: 17px;
+    }
   }
-}
 
-@media (max-width: 560px) {
-  .blog__card {
-    margin-bottom: 30px;
+  &__row {
+    @include breakpoint(lg) {
+      display: flex;
+      justify-content: center;
+    }
   }
-}
 
-.blog__card-head {
-  position: relative;
-  margin-bottom: 30px;
-}
+  &__card {
+    font-family: "Raleway", sans-serif;
 
-.blog__img-wrap {
-  position: relative;
-  overflow: hidden;
-  padding-bottom: 70%;
-}
+    @include breakpoint(lg) {
+      margin-bottom: 50px;
+    }
 
-.blog__img {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  min-width: 100%;
-  min-height: 100%;
-}
-
-.blog__news-date {
-  position: absolute;
-  bottom: 20px;
-  left: -14px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  width: 80px;
-  height: 80px;
-  background: var(--blue);
-  color: var(--white);
-  font-size: 18px;
-  text-transform: uppercase;
-}
-
-@media (max-width: 1200px) {
-  .blog__news-date {
-    width: 68px;
-    height: 68px;
-    font-size: 14px;
+    @include breakpoint(sm) {
+      margin-bottom: 30px;
+    }
   }
-}
 
-.blog__news-date span {
-  font-weight: 700;
-  font-size: 36px;
-  margin-bottom: 5px;
-}
-
-@media (max-width: 1200px) {
-  .blog__news-date span {
-    font-size: 24px;
+  &__card-head {
+    position: relative;
+    margin-bottom: 28px;
   }
-}
 
-.blog__card-title {
-  margin-bottom: 10px;
-  padding: 6px 0;
-  font-weight: 700;
-  font-size: 24px;
-  line-height: 1.2;
-  text-transform: uppercase;
-}
+  &__img-wrap {
+    position: relative;
+    overflow: hidden;
+    padding-bottom: 70%;
+  }
 
-.blog__card-title a {
-  color: inherit;
-  text-decoration: none;
-}
+  &__img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    min-width: 100%;
+    min-height: 100%;
+  }
 
-@media (max-width: 1200px) {
-  .blog__card-title {
+  &__news-date {
+    position: absolute;
+    bottom: 20px;
+    left: -14px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 80px;
+    height: 80px;
+    background: var(--blue);
+    color: var(--white);
     font-size: 18px;
+    text-transform: uppercase;
+
+    @include breakpoint(xl) {
+      width: 68px;
+      height: 68px;
+      font-size: 14px;
+    }
+
+    & span {
+      font-weight: 700;
+      font-size: 36px;
+      margin-bottom: 5px;
+
+      @include breakpoint(xl) {
+        font-size: 24px;
+      }
+    }
   }
-}
 
-.blog__card-desc {
-  font-weight: 400;
-  font-size: 18px;
-  line-height: 1.2;
-}
-
-@media (max-width: 1200px) {
-  .blog__card-desc {
-    font-size: 14px;
+  &__card-title {
+    margin-bottom: 10px;
+    padding: 6px 0;
+    font-weight: 700;
+    font-size: 24px;
     line-height: 1.2;
+    text-transform: uppercase;
+
+    @include breakpoint(xl) {
+      font-size: 18px;
+    }
+
+    & a {
+      color: inherit;
+      text-decoration: none;
+    }
   }
-}
 
-.blog__info-panel {
-  display: flex;
-  flex-wrap: wrap;
-  margin-top: 22px;
-}
+  &__card-desc {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 1.2;
 
-.blog__info-block {
-  display: flex;
-  align-items: center;
-  margin-right: 44px;
-  font-weight: 400;
-  font-size: 13px;
-  line-height: 1.2;
-}
-
-@media (max-width: 1200px) {
-  .blog__info-block {
-    font-size: 12px;
+    @include breakpoint(xl) {
+      font-size: 14px;
+      line-height: 1.2;
+    }
   }
-}
 
-.blog__info-block:last-child {
-  margin-right: 0;
-}
+  &__info-panel {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 20px;
+  }
 
-.blog__info-img {
-  width: 32px;
-  flex-shrink: 0;
-  margin-right: 16px;
+  &__info-block {
+    display: flex;
+    align-items: center;
+    margin-right: 44px;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 1.2;
+
+    @include breakpoint(xl) {
+      font-size: 12px;
+    }
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
+  &__info-img {
+    width: 30px;
+    flex-shrink: 0;
+    margin-right: 16px;
+  }
 }
 
 /* end BLOG ==================================================================*/

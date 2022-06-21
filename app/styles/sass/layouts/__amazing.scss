@@ -1,118 +1,98 @@
 // */startAMAZING==================================================================*/
-  .amazing {
+.amazing {
   padding-top: 42px;
   padding-bottom: 21px;
-}
 
-@media (max-width: 1200px) {
-  .amazing {
+  @include breakpoint(xl) {
     padding-top: 29px;
     padding-bottom: 26px;
   }
-}
 
-@media (max-width: 560px) {
-  .amazing {
+  @include breakpoint(sm) {
     padding-top: 48px;
     padding-bottom: 40px;
   }
-}
 
-.amazing__head {
-  margin-bottom: 10px;
-}
+  &__head {
+    margin-bottom: 10px;
 
-@media (max-width: 1200px) {
-  .amazing__head {
-    margin-bottom: 42px;
+    @include breakpoint(xl) {
+      margin-bottom: 42px;
+    }
   }
-}
 
-.amazing__card {
-  display: flex;
-  margin-top: 78px;
-  margin-bottom: 70px;
-}
+  &__card {
+    display: flex;
+    align-items: flex-start;
+    margin-top: 78px;
+    margin-bottom: 70px;
 
-@media (max-width: 1200px) {
-  .amazing__card {
-    margin-top: 33px;
-    margin-bottom: 32px;
+    @include breakpoint(xl) {
+      margin-top: 33px;
+      margin-bottom: 32px;
+    }
+
+    @include breakpoint(sm) {
+      margin-top: 18px;
+      margin-bottom: 18px;
+    }
   }
-}
 
-@media (max-width: 560px) {
-  .amazing__card {
-    margin-top: 18px;
-    margin-bottom: 18px;
+  &__card-img {
+    width: 70px;
+    height: 70px;
+    flex-shrink: 0;
+    align-self: flex-start;
+
+    @include breakpoint(xl) {
+      width: 60px;
+      height: 60px;
+    }
+
+    @include breakpoint(sm) {
+      width: 57px;
+      height: 57px;
+    }
   }
-}
 
-.amazing__card-img {
-  width: 70px;
-  height: 70px;
-  flex-shrink: 0;
-  align-self: flex-start;
-}
+  &__info {
+    padding-left: 30px;
 
-@media (max-width: 1200px) {
-  .amazing__card-img {
-    width: 60px;
-    height: 60px;
+    @include breakpoint(xl) {
+      padding-left: 25px;
+    }
+
+    @include breakpoint(sm) {
+      padding-left: 20px;
+    }
   }
-}
 
-@media (max-width: 560px) {
-  .amazing__card-img {
-    width: 57px;
-    height: 57px;
+  &__card-name {
+    padding-top: 17px;
+    font-family: "Raleway", sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 1.2;
+    text-transform: uppercase;
+
+    @include breakpoint(xl) {
+      font-size: 18px;
+    }
   }
-}
 
-.amazing__info {
-  padding-left: 30px;
-}
-
-@media (max-width: 1200px) {
-  .amazing__card-info {
-    padding-left: 25px;
-  }
-}
-
-@media (max-width: 560px) {
-  .amazing__card-info {
-    padding-left: 20px;
-  }
-}
-
-.amazing__card-name {
-  padding: 11px 0;
-  font-family: "Raleway", sans-serif;
-  font-style: normal;
-  font-weight: 700;
-  font-size: 24px;
-  line-height: 1.2;
-  text-transform: uppercase;
-}
-
-@media (max-width: 1200px) {
-  .amazing__card-name {
+  &__card-desc {
+    padding: 15px 0;
+    font-family: "Raleway", sans-serif;
+    font-style: normal;
+    font-weight: 400;
     font-size: 18px;
+    line-height: 1.2;
+
+    @include breakpoint(xl) {
+      font-size: 14px;
+    }
   }
 }
 
-.amazing__card-desc {
-  padding: 15px 0;
-  font-family: "Raleway", sans-serif;
-  font-style: normal;
-  font-weight: 400;
-  font-size: 18px;
-  line-height: 1.2;
-}
-
-@media (max-width: 1200px) {
-  .amazing__card-desc {
-    font-size: 14px;
-  }
-}
 /* end AMAZING ==================================================================*/

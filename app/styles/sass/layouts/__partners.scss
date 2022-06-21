@@ -1,0 +1,25 @@
+.partners {
+    background: var(--light-grey);
+
+  &__row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  &__card {
+    padding: 42px 0;
+    }
+
+  &__img {
+    display: block;
+    margin: 0 auto;
+    width: 127px;
+    height: 127px;
+
+    @include breakpoint(xl) {
+      width: 86px;
+      height: 86px;
+    }
+  }
+}

@@ -19,7 +19,15 @@
   margin-right: var(--gutter);
 }
 
-@media (max-width: 1200px) {
+@include breakpoint(xl) {
+  .col-xl-1 {
+    width: calc(100% / 12 * 1 - var(--gutter) * 2);
+    margin-left: var(--gutter);
+    margin-right: var(--gutter);
+  }
+}
+
+@include breakpoint(lg) {
   .col-lg-1 {
     width: calc(100% / 12 * 1 - var(--gutter) * 2);
     margin-left: var(--gutter);
@@ -27,7 +35,7 @@
   }
 }
 
-@media (max-width: 992px) {
+@include breakpoint(md) {
   .col-md-1 {
     width: calc(100% / 12 * 1 - var(--gutter) * 2);
     margin-left: var(--gutter);
@@ -35,16 +43,8 @@
   }
 }
 
-@media (max-width: 768px) {
+@include breakpoint(sm) {
   .col-sm-1 {
-    width: calc(100% / 12 * 1 - var(--gutter) * 2);
-    margin-left: var(--gutter);
-    margin-right: var(--gutter);
-  }
-}
-
-@media (max-width: 560px) {
-  .col-xs-1 {
     width: calc(100% / 12 * 1 - var(--gutter) * 2);
     margin-left: var(--gutter);
     margin-right: var(--gutter);
@@ -58,7 +58,15 @@
   margin-right: var(--gutter);
 }
 
-@media (max-width: 1200px) {
+@include breakpoint(xl) {
+  .col-xl-2 {
+    width: calc(100% / 12 * 2 - var(--gutter) * 2);
+    margin-left: var(--gutter);
+    margin-right: var(--gutter);
+  }
+}
+
+@include breakpoint(lg) {
   .col-lg-2 {
     width: calc(100% / 12 * 2 - var(--gutter) * 2);
     margin-left: var(--gutter);
@@ -66,7 +74,7 @@
   }
 }
 
-@media (max-width: 992px) {
+@include breakpoint(md) {
   .col-md-2 {
     width: calc(100% / 12 * 2 - var(--gutter) * 2);
     margin-left: var(--gutter);
@@ -74,16 +82,8 @@
   }
 }
 
-@media (max-width: 768px) {
+@include breakpoint(sm) {
   .col-sm-2 {
-    width: calc(100% / 12 * 2 - var(--gutter) * 2);
-    margin-left: var(--gutter);
-    margin-right: var(--gutter);
-  }
-}
-
-@media (max-width: 560px) {
-  .col-xs-2 {
     width: calc(100% / 12 * 2 - var(--gutter) * 2);
     margin-left: var(--gutter);
     margin-right: var(--gutter);
@@ -97,7 +97,15 @@
   margin-right: var(--gutter);
 }
 
-@media (max-width: 1200px) {
+@include breakpoint(xl) {
+  .col-xl-3 {
+    width: calc(100% / 12 * 3 - var(--gutter) * 2);
+    margin-left: var(--gutter);
+    margin-right: var(--gutter);
+  }
+}
+
+@include breakpoint(lg) {
   .col-lg-3 {
     width: calc(100% / 12 * 3 - var(--gutter) * 2);
     margin-left: var(--gutter);
@@ -105,7 +113,7 @@
   }
 }
 
-@media (max-width: 992px) {
+@include breakpoint(md) {
   .col-md-3 {
     width: calc(100% / 12 * 3 - var(--gutter) * 2);
     margin-left: var(--gutter);
@@ -113,16 +121,8 @@
   }
 }
 
-@media (max-width: 768px) {
+@include breakpoint(sm) {
   .col-sm-3 {
-    width: calc(100% / 12 * 3 - var(--gutter) * 2);
-    margin-left: var(--gutter);
-    margin-right: var(--gutter);
-  }
-}
-
-@media (max-width: 560px) {
-  .col-xs-3 {
     width: calc(100% / 12 * 3 - var(--gutter) * 2);
     margin-left: var(--gutter);
     margin-right: var(--gutter);
@@ -136,7 +136,15 @@
   margin-right: var(--gutter);
 }
 
-@media (max-width: 1200px) {
+@include breakpoint(xl) {
+  .col-xl-4 {
+    width: calc(100% / 12 * 4 - var(--gutter) * 2);
+    margin-left: var(--gutter);
+    margin-right: var(--gutter);
+  }
+}
+
+@include breakpoint(lg) {
   .col-lg-4 {
     width: calc(100% / 12 * 4 - var(--gutter) * 2);
     margin-left: var(--gutter);
@@ -144,7 +152,7 @@
   }
 }
 
-@media (max-width: 992px) {
+@include breakpoint(md) {
   .col-md-4 {
     width: calc(100% / 12 * 4 - var(--gutter) * 2);
     margin-left: var(--gutter);
@@ -152,16 +160,8 @@
   }
 }
 
-@media (max-width: 768px) {
+@include breakpoint(sm) {
   .col-sm-4 {
-    width: calc(100% / 12 * 4 - var(--gutter) * 2);
-    margin-left: var(--gutter);
-    margin-right: var(--gutter);
-  }
-}
-
-@media (max-width: 560px) {
-  .col-xs-4 {
     width: calc(100% / 12 * 4 - var(--gutter) * 2);
     margin-left: var(--gutter);
     margin-right: var(--gutter);
@@ -175,7 +175,15 @@
   margin-right: var(--gutter);
 }
 
-@media (max-width: 1200px) {
+@include breakpoint(xl) {
+  .col-xl-5 {
+    width: calc(100% / 12 * 5 - var(--gutter) * 2);
+    margin-left: var(--gutter);
+    margin-right: var(--gutter);
+  }
+}
+
+@include breakpoint(lg) {
   .col-lg-5 {
     width: calc(100% / 12 * 5 - var(--gutter) * 2);
     margin-left: var(--gutter);
@@ -183,7 +191,7 @@
   }
 }
 
-@media (max-width: 992px) {
+@include breakpoint(md) {
   .col-md-5 {
     width: calc(100% / 12 * 5 - var(--gutter) * 2);
     margin-left: var(--gutter);
@@ -191,16 +199,8 @@
   }
 }
 
-@media (max-width: 768px) {
+@include breakpoint(sm) {
   .col-sm-5 {
-    width: calc(100% / 12 * 5 - var(--gutter) * 2);
-    margin-left: var(--gutter);
-    margin-right: var(--gutter);
-  }
-}
-
-@media (max-width: 560px) {
-  .col-xs-5 {
     width: calc(100% / 12 * 5 - var(--gutter) * 2);
     margin-left: var(--gutter);
     margin-right: var(--gutter);
@@ -214,7 +214,15 @@
   margin-right: var(--gutter);
 }
 
-@media (max-width: 1200px) {
+@include breakpoint(xl) {
+  .col-xl-6 {
+    width: calc(100% / 12 * 6 - var(--gutter) * 2);
+    margin-left: var(--gutter);
+    margin-right: var(--gutter);
+  }
+}
+
+@include breakpoint(lg) {
   .col-lg-6 {
     width: calc(100% / 12 * 6 - var(--gutter) * 2);
     margin-left: var(--gutter);
@@ -222,7 +230,7 @@
   }
 }
 
-@media (max-width: 992px) {
+@include breakpoint(md) {
   .col-md-6 {
     width: calc(100% / 12 * 6 - var(--gutter) * 2);
     margin-left: var(--gutter);
@@ -230,16 +238,8 @@
   }
 }
 
-@media (max-width: 768px) {
+@include breakpoint(sm) {
   .col-sm-6 {
-    width: calc(100% / 12 * 6 - var(--gutter) * 2);
-    margin-left: var(--gutter);
-    margin-right: var(--gutter);
-  }
-}
-
-@media (max-width: 560px) {
-  .col-xs-6 {
     width: calc(100% / 12 * 6 - var(--gutter) * 2);
     margin-left: var(--gutter);
     margin-right: var(--gutter);
@@ -253,7 +253,15 @@
   margin-right: var(--gutter);
 }
 
-@media (max-width: 1200px) {
+@include breakpoint(xl) {
+  .col-xl-7 {
+    width: calc(100% / 12 * 7 - var(--gutter) * 2);
+    margin-left: var(--gutter);
+    margin-right: var(--gutter);
+  }
+}
+
+@include breakpoint(lg) {
   .col-lg-7 {
     width: calc(100% / 12 * 7 - var(--gutter) * 2);
     margin-left: var(--gutter);
@@ -261,7 +269,7 @@
   }
 }
 
-@media (max-width: 992px) {
+@include breakpoint(md) {
   .col-md-7 {
     width: calc(100% / 12 * 7 - var(--gutter) * 2);
     margin-left: var(--gutter);
@@ -269,16 +277,8 @@
   }
 }
 
-@media (max-width: 768px) {
+@include breakpoint(sm) {
   .col-sm-7 {
-    width: calc(100% / 12 * 7 - var(--gutter) * 2);
-    margin-left: var(--gutter);
-    margin-right: var(--gutter);
-  }
-}
-
-@media (max-width: 560px) {
-  .col-xs-7 {
     width: calc(100% / 12 * 7 - var(--gutter) * 2);
     margin-left: var(--gutter);
     margin-right: var(--gutter);
@@ -292,7 +292,15 @@
   margin-right: var(--gutter);
 }
 
-@media (max-width: 1200px) {
+@include breakpoint(xl) {
+  .col-xl-8 {
+    width: calc(100% / 12 * 8 - var(--gutter) * 2);
+    margin-left: var(--gutter);
+    margin-right: var(--gutter);
+  }
+}
+
+@include breakpoint(lg) {
   .col-lg-8 {
     width: calc(100% / 12 * 8 - var(--gutter) * 2);
     margin-left: var(--gutter);
@@ -300,7 +308,7 @@
   }
 }
 
-@media (max-width: 992px) {
+@include breakpoint(md) {
   .col-md-8 {
     width: calc(100% / 12 * 8 - var(--gutter) * 2);
     margin-left: var(--gutter);
@@ -308,16 +316,8 @@
   }
 }
 
-@media (max-width: 768px) {
+@include breakpoint(sm) {
   .col-sm-8 {
-    width: calc(100% / 12 * 8 - var(--gutter) * 2);
-    margin-left: var(--gutter);
-    margin-right: var(--gutter);
-  }
-}
-
-@media (max-width: 560px) {
-  .col-xs-8 {
     width: calc(100% / 12 * 8 - var(--gutter) * 2);
     margin-left: var(--gutter);
     margin-right: var(--gutter);
@@ -331,7 +331,15 @@
   margin-right: var(--gutter);
 }
 
-@media (max-width: 1200px) {
+@include breakpoint(xl) {
+  .col-xl-9 {
+    width: calc(100% / 12 * 9 - var(--gutter) * 2);
+    margin-left: var(--gutter);
+    margin-right: var(--gutter);
+  }
+}
+
+@include breakpoint(lg) {
   .col-lg-9 {
     width: calc(100% / 12 * 9 - var(--gutter) * 2);
     margin-left: var(--gutter);
@@ -339,7 +347,7 @@
   }
 }
 
-@media (max-width: 992px) {
+@include breakpoint(md) {
   .col-md-9 {
     width: calc(100% / 12 * 9 - var(--gutter) * 2);
     margin-left: var(--gutter);
@@ -347,16 +355,8 @@
   }
 }
 
-@media (max-width: 768px) {
+@include breakpoint(sm) {
   .col-sm-9 {
-    width: calc(100% / 12 * 9 - var(--gutter) * 2);
-    margin-left: var(--gutter);
-    margin-right: var(--gutter);
-  }
-}
-
-@media (max-width: 560px) {
-  .col-xs-9 {
     width: calc(100% / 12 * 9 - var(--gutter) * 2);
     margin-left: var(--gutter);
     margin-right: var(--gutter);
@@ -370,7 +370,15 @@
   margin-right: var(--gutter);
 }
 
-@media (max-width: 1200px) {
+@include breakpoint(xl) {
+  .col-xl-10 {
+    width: calc(100% / 12 * 10 - var(--gutter) * 2);
+    margin-left: var(--gutter);
+    margin-right: var(--gutter);
+  }
+}
+
+@include breakpoint(lg) {
   .col-lg-10 {
     width: calc(100% / 12 * 10 - var(--gutter) * 2);
     margin-left: var(--gutter);
@@ -378,7 +386,7 @@
   }
 }
 
-@media (max-width: 992px) {
+@include breakpoint(md) {
   .col-md-10 {
     width: calc(100% / 12 * 10 - var(--gutter) * 2);
     margin-left: var(--gutter);
@@ -386,16 +394,8 @@
   }
 }
 
-@media (max-width: 768px) {
+@include breakpoint(sm) {
   .col-sm-10 {
-    width: calc(100% / 12 * 10 - var(--gutter) * 2);
-    margin-left: var(--gutter);
-    margin-right: var(--gutter);
-  }
-}
-
-@media (max-width: 560px) {
-  .col-xs-10 {
     width: calc(100% / 12 * 10 - var(--gutter) * 2);
     margin-left: var(--gutter);
     margin-right: var(--gutter);
@@ -409,7 +409,15 @@
   margin-right: var(--gutter);
 }
 
-@media (max-width: 1200px) {
+@include breakpoint(xl) {
+  .col-xl-11 {
+    width: calc(100% / 12 * 11 - var(--gutter) * 2);
+    margin-left: var(--gutter);
+    margin-right: var(--gutter);
+  }
+}
+
+@include breakpoint(lg) {
   .col-lg-11 {
     width: calc(100% / 12 * 11 - var(--gutter) * 2);
     margin-left: var(--gutter);
@@ -417,7 +425,7 @@
   }
 }
 
-@media (max-width: 992px) {
+@include breakpoint(md) {
   .col-md-11 {
     width: calc(100% / 12 * 11 - var(--gutter) * 2);
     margin-left: var(--gutter);
@@ -425,16 +433,8 @@
   }
 }
 
-@media (max-width: 768px) {
+@include breakpoint(sm) {
   .col-sm-11 {
-    width: calc(100% / 12 * 11 - var(--gutter) * 2);
-    margin-left: var(--gutter);
-    margin-right: var(--gutter);
-  }
-}
-
-@media (max-width: 560px) {
-  .col-xs-11 {
     width: calc(100% / 12 * 11 - var(--gutter) * 2);
     margin-left: var(--gutter);
     margin-right: var(--gutter);
@@ -448,7 +448,15 @@
   margin-right: var(--gutter);
 }
 
-@media (max-width: 1200px) {
+@include breakpoint(xl) {
+  .col-xl-12 {
+    width: calc(100% / 12 * 12 - var(--gutter) * 2);
+    margin-left: var(--gutter);
+    margin-right: var(--gutter);
+  }
+}
+
+@include breakpoint(lg) {
   .col-lg-12 {
     width: calc(100% / 12 * 12 - var(--gutter) * 2);
     margin-left: var(--gutter);
@@ -456,7 +464,7 @@
   }
 }
 
-@media (max-width: 992px) {
+@include breakpoint(md) {
   .col-md-12 {
     width: calc(100% / 12 * 12 - var(--gutter) * 2);
     margin-left: var(--gutter);
@@ -464,16 +472,8 @@
   }
 }
 
-@media (max-width: 768px) {
+@include breakpoint(sm) {
   .col-sm-12 {
-    width: calc(100% / 12 * 12 - var(--gutter) * 2);
-    margin-left: var(--gutter);
-    margin-right: var(--gutter);
-  }
-}
-
-@media (max-width: 560px) {
-  .col-xs-12 {
     width: calc(100% / 12 * 12 - var(--gutter) * 2);
     margin-left: var(--gutter);
     margin-right: var(--gutter);

@@ -6,13 +6,13 @@
   background-size: cover;
   background-repeat: no-repeat;
 
-  &__link {
-    display: inline-block;
-margin: 0 auto;
+  @include breakpoint(xl) {
+    padding-top: 28px;
+    padding-bottom: 10px;
   }
 
-  &__img {
-    width: 42px;
-    height: 42px;
+  @include breakpoint(sm) {
+    padding-top: 42px;
+    padding-bottom: 23px;
   }
 }

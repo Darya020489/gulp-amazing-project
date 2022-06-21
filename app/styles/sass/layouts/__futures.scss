@@ -8,10 +8,24 @@
   }
 
   &__card {
+    padding: 70px 0;
     width: 20%;
-    padding: 70px 15px;
     text-align: center;
     border: 0.5px solid var(--white);
+
+    @include breakpoint(xl) {
+      padding-top: 50px;
+      padding-bottom: 50px;
+    }
+
+    @include breakpoint(md) {
+      width: 50%;
+      border: none;
+      border-bottom: 0.5px solid var(--white);
+    }
+
+    @include breakpoint(sm) {
+    }
   }
 
   &__info {
@@ -19,11 +33,20 @@
     font-weight: 700;
     font-size: 64px;
     color: var(--white);
+
+    @include breakpoint(xl) {
+      font-size: 48px;
+    }
   }
 
   &__text {
     font-weight: 700;
     font-size: 24px;
     color: var(--white);
+
+    @include breakpoint(xl) {
+      font-weight: 500;
+      font-size: 18px;
+    }
   }
 }

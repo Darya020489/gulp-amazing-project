@@ -1,0 +1,89 @@
+.accordion {
+  &__item:first-child > &__btn {
+    margin-top: 0;
+    background: var(--white) url(../images/src/svg-icons/man.svg) no-repeat 2%
+      center;
+  }
+
+  &__item:last-child > &__btn {
+    background: var(--white) url(../images/src/svg-icons/gear.svg) no-repeat 2%
+      center;
+  }
+
+  &__btn {
+    margin-top: 22px;
+    display: flex;
+    align-items: center;
+    padding: 32px;
+    padding-left: 100px;
+    width: 100%;
+    text-align: left;
+    vertical-align: center;
+    border: 1px solid var(--grey);
+    font-weight: 700;
+    font-size: 24px;
+    text-transform: uppercase;
+    transition: 0.4s;
+    background: var(--white) url(../images/src/svg-icons/target.svg) no-repeat
+      2% center;
+    background-size: 42px 42px;
+
+    @include breakpoint(xl) {
+      margin-top: 19px;
+    padding: 28px;
+    padding-left: 84px;
+    font-size: 18px;
+    background-size: 36px 36px;
+    }
+
+    @include breakpoint(sm) {
+    font-size: 14px;
+    }
+  }
+
+  &__btn.active > &__img {
+    transform: rotate(180deg);
+  }
+
+  &__img {
+    margin-left: auto;
+    width: 42px;
+    height: 42px;
+    transition: 0.3s;
+
+    @include breakpoint(xl) {
+      width: 36px;
+      height: 36px;
+    }
+  }
+
+  &__desc {
+    padding: 22px;
+    max-height: 163px;
+    display: none;
+    overflow: auto;
+    border: 1px solid var(--grey);
+    font-weight: 400;
+    font-size: 18px;
+    background-color: var(--white);
+
+    @include breakpoint(xl) {
+      max-height: 138px;
+      font-size: 14px;
+    }
+
+    @include breakpoint(sm) {
+      font-size: 13px;
+    }
+  }
+
+  ::-webkit-scrollbar {
+    // padding-right: 24px;
+    width: 7px;
+    background-color: #f5f5f5;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background-color: var(--blue);
+  }
+}

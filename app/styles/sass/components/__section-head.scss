@@ -1,61 +1,74 @@
 .section-head {
   text-align: center;
   color: var(--black);
-}
 
-.section-head_accent .section-head__title {
-  color: var(--accent);
-}
-
-.section-head__subtitle {
-  padding: 18px 0;
-  font-family: "Kaushan Script";
-  font-size: 30px;
-  font-weight: 400;
-  line-height: 1.5;
-  color: var(--black);
-}
-
-@media (max-width: 1200px) {
-  .section-head__subtitle {
-    padding: 16px 0;
-    font-size: 24px;
+  &_accent &__title {
+    color: var(--accent);
   }
-}
 
-.section-head__title {
-  padding: 19px;
-  font-family: "Raleway";
-  font-size: 36px;
-  font-weight: 900;
-  line-height: 1.2;
-  color: var(--black);
-  text-transform: uppercase;
-}
+  &__subtitle {
+    padding: 25px 0;
+    font-family: "Kaushan Script";
+    font-size: 30px;
+    font-weight: 400;
+    line-height: 1.5;
+    color: var(--black);
 
-@media (max-width: 1200px) {
-  .section-head__title {
-    font-size: 24px;
+    @include breakpoint(xl) {
+      padding: 16px 0;
+      font-size: 24px;
+    }
   }
-}
 
-.section-head__title::after {
-  content: "";
-  display: block;
-  width: 170px;
-  height: 4px;
-  margin: 24px auto 0;
-  background: var(--accent);
-}
+  &__title {
+    padding: 19px;
+    font-family: "Raleway";
+    font-size: 36px;
+    font-weight: 900;
+    line-height: 1.2;
+    color: var(--black);
+    text-transform: uppercase;
 
-@media (max-width: 1200px) {
-  .section-head__title::after {
-    width: 148px;
+    @include breakpoint(xl) {
+      font-size: 24px;
+    }
+
+    &::after {
+      content: "";
+      display: block;
+      width: 170px;
+      height: 4px;
+      margin: 24px auto 0;
+      background: var(--accent);
+
+      @include breakpoint(xl) {
+        width: 148px;
+      }
+
+      @include breakpoint(sm) {
+        width: 134px;
+        margin-top: 50px;
+      }
+    }
   }
-}
 
-@media (max-width: 560px) {
-  .section-head__title::after {
-    width: 144px;
+  &__link {
+    display: inline-block;
+    margin: 0 auto;
+  }
+
+  &__img {
+    width: 42px;
+    height: 42px;
+
+    @include breakpoint(xl) {
+      width: 28px;
+      height: 28px;
+    }
+
+    @include breakpoint(sm) {
+      width: 42px;
+      height: 42px;
+    }
   }
 }

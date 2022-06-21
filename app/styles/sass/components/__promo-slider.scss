@@ -1,0 +1,71 @@
+.promo-slider {
+  &__pagination {
+    margin-top: 112px;
+    padding-bottom: 85px;
+    z-index: 1;
+
+    @include breakpoint(xl) {
+      margin-top: 75px;
+      padding-bottom: 57px;
+    }
+
+    @include breakpoint(sm) {
+      margin-top: 50px;
+      padding-bottom: 42px;
+    }
+  }
+
+  &__pagination > li {
+    margin-right: calc(var(--gutter) * 2);
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
+  &__pagination > li button {
+    position: relative;
+    padding: 0;
+    width: 270px;
+    height: 4px;
+    border: none;
+    background: var(--light-yellow);
+
+    @include breakpoint(xl) {
+      width: 217px;
+    }
+
+    @include breakpoint(lg) {
+      width: 165px;
+    }
+
+    @include breakpoint(md) {
+      width: 57px;
+    }
+
+    &::after {
+      content: "01 intro";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      padding-top: 40px;
+      text-align: left;
+      font-weight: 500;
+      font-size: 18px;
+      color: var(--light-yellow);
+
+      @include breakpoint(md) {
+        display: none;
+      }
+    }
+
+    &.is-active {
+      background: var(--white);
+    }
+
+    &.is-active &::after {
+      color: var(--white);
+    }
+  }
+}

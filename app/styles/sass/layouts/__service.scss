@@ -1,0 +1,53 @@
+.service {
+  padding-top: 42px;
+  padding-bottom: 114px;
+
+  @include breakpoint(xl) {
+    padding-top: 86px;
+    padding-bottom: 88px;
+  }
+
+  @include breakpoint(sm) {
+    padding-top: 52px;
+    padding-bottom: 31px;
+  }
+
+  &__text {
+    margin-bottom: 42px;
+    padding: 15px 0;
+    text-align: center;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 1.2;
+
+    @include breakpoint(xl) {
+      margin-bottom: 36px;
+      font-size: 14px;
+    }
+
+    @include breakpoint(sm) {
+      margin-bottom: 29px;
+    }
+  }
+
+  &__wrap-img {
+    position: relative;
+    overflow: hidden;
+    padding-bottom: 85%;
+
+    @include breakpoint(md) {
+    padding-bottom: 49%;
+    margin-bottom: 29px;
+    }
+  }
+
+  &__img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    min-width: 100%;
+    min-height: 100%;
+    max-width: initial;
+  }
+}

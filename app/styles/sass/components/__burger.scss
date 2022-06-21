@@ -1,0 +1,24 @@
+.burger {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 24px;
+    height: 18px;
+    background: transparent;
+    padding: 0;
+    border: none;
+
+    &__line {
+        // position: absolute;
+        width: 100%;
+        height: 3px;
+        margin-bottom: 4px;
+        background: var(--white);
+    }
+}
+.header {
+
+    &__burger {
+    }
+}

@@ -1,0 +1,73 @@
+.devices {
+  padding-top: 42px;
+  padding-bottom: 57px;
+  background-image: linear-gradient(rgba(255, 255, 255, 0.8)),
+    url("../images/dist/devices/mountain.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+
+  @include breakpoint(xl) {
+    padding-top: 29px;
+    padding-bottom: 39px;
+  }
+
+  @include breakpoint(sm) {
+    padding-top: 43px;
+    padding-bottom: 25px;
+  }
+
+  &__head {
+    margin-bottom: 59px;
+
+    @include breakpoint(xl) {
+      margin-bottom: 40px;
+    }
+
+    @include breakpoint(sm) {
+      margin-bottom: 37px;
+    }
+
+    &__subtitle {
+      font-size: 30px;
+    }
+
+    &__title {
+      font-size: 36px;
+    }
+  }
+
+  &__wrap {
+    position: relative;
+    max-width: 660px;
+    margin: 0 auto;
+
+    @include breakpoint(xl) {
+      max-width: 467px;
+    }
+
+    @include breakpoint(sm) {
+      max-width: 286px;
+    }
+  }
+
+  &__img-mac {
+  }
+
+  &__img-iphone {
+    position: absolute;
+    bottom: -99px;
+    right: -45px;
+    width: 30%;
+
+    @include breakpoint(xl) {
+      bottom: -65px;
+      right: -28px;
+    }
+
+    @include breakpoint(sm) {
+      right: 29px;
+      bottom: -55px;
+    }
+  }
+}
