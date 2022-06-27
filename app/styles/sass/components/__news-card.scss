@@ -19,7 +19,7 @@
     }
 
     @include breakpoint(sm) {
-    padding-left: 14px;
+      padding-left: 14px;
     }
   }
 
@@ -35,7 +35,7 @@
     }
 
     @include breakpoint(sm) {
-    margin-bottom: 5px;
+      margin-bottom: 5px;
     }
 
     & a {

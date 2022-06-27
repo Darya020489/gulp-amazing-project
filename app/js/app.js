@@ -3,28 +3,68 @@
 
 // Custom JS
 
+// header_has-bg==============================================
+let header = document.querySelector(".header");
+
+document.addEventListener("scroll", () => {
+  if (document.documentElement.scrollTop > 1) {
+    header.classList.add("header_has-bg");
+  } else {
+    header.classList.remove("header_has-bg");
+  }
+});
+
 // Mobile-menu ================================================
 const headerBurger = document.querySelector(".header__burger");
 const headerNav = document.querySelector(".header__nav");
-// const menuCloseItem = document.querySelector('.header__nav-close');
+const headerClose = document.querySelector('.header__close');
 
 headerBurger.addEventListener("click", function (event) {
-  headerBurger.classList.toggle("burger_closed");
-  headerNav.classList.toggle("header__nav_opened");
+  headerBurger.classList.add("burger_closed");
+  headerNav.classList.add("header__nav_opened");
+  headerClose.classList.add("close_opened");
 });
-// Slider ================================================
+
+headerClose.addEventListener("click", function (event) {
+  headerBurger.classList.remove("burger_closed");
+  headerNav.classList.remove("header__nav_opened");
+  headerClose.classList.remove("close_opened");
+});
+
+// Promo-slider ================================================
 import Splide from "@splidejs/splide";
 document.addEventListener("DOMContentLoaded", () => {
-  new Splide("#promo-slider", {
+  const promoSlides = document.querySelectorAll('[data-slide-title]');
+  let slideTitles = [];
+  promoSlides.forEach(function(slide) {
+    slideTitles.push(slide.dataset.slideTitle);
+  });
+  const promoSlider = new Splide("#promo-slider", {
     type: "loop",
     autoplay: true,
-    interval: 2000,
+    interval: 3000,
+    // speed: 3000,
+    pauseOnHover: false,
+    perPage: 1,
     classes: {
       pagination: "splide__pagination promo-slider__pagination",
     },
     arrows: false,
-  }).mount();
+    drag: false,
+  });
 
+  promoSlider.on( 'pagination:mounted', function ( data ) {
+    // You can add your class to the UL element
+    data.list.classList.add( 'splide__pagination--custom' );
+  
+    // `items` contains all dot items
+    data.items.forEach( function ( item ) {
+      item.button.textContent = `${slideTitles[item.page]}`;
+    } );
+  } );
+  promoSlider.mount();
+
+// Slider ================================================
   const revSliderSettings = {
     type: "loop",
     gap: "40px",
@@ -48,17 +88,6 @@ document.addEventListener("DOMContentLoaded", () => {
   new Splide("#author-reviews", revSliderSettings).mount();
 });
 
-// header==============================================
-
-let header = document.querySelector(".header");
-
-document.addEventListener("scroll", () => {
-  if (document.documentElement.scrollTop > 1) {
-    header.classList.add("header_has-bg");
-  } else {
-    header.classList.remove("header_has-bg");
-  }
-});
 
 // AOS init===============================================
 AOS.init();

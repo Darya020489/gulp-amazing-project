@@ -1,12 +1,12 @@
 .accordion {
   &__item:first-child > &__btn {
     margin-top: 0;
-    background: var(--white) url(../images/src/svg-icons/man.svg) no-repeat 2%
+    background: var(--white) url(../images/dist/svg-icons/man.svg) no-repeat 2%
       center;
   }
 
   &__item:last-child > &__btn {
-    background: var(--white) url(../images/src/svg-icons/gear.svg) no-repeat 2%
+    background: var(--white) url(../images/dist/svg-icons/gear.svg) no-repeat 2%
       center;
   }
 
@@ -24,20 +24,20 @@
     font-size: 24px;
     text-transform: uppercase;
     transition: 0.4s;
-    background: var(--white) url(../images/src/svg-icons/target.svg) no-repeat
+    background: var(--white) url(../images/dist/svg-icons/target.svg) no-repeat
       2% center;
     background-size: 42px 42px;
 
     @include breakpoint(xl) {
       margin-top: 19px;
-    padding: 28px;
-    padding-left: 84px;
-    font-size: 18px;
-    background-size: 36px 36px;
+      padding: 28px;
+      padding-left: 84px;
+      font-size: 18px;
+      background-size: 36px 36px;
     }
 
     @include breakpoint(sm) {
-    font-size: 14px;
+      font-size: 14px;
     }
   }
 
@@ -57,18 +57,26 @@
     }
   }
 
-  &__desc {
-    padding: 22px;
+  &__desc-wrap {
+    padding-right: 24px;
     max-height: 163px;
     display: none;
     overflow: auto;
     border: 1px solid var(--grey);
-    font-weight: 400;
-    font-size: 18px;
     background-color: var(--white);
 
     @include breakpoint(xl) {
       max-height: 138px;
+    }
+  }
+
+  &__desc {
+    padding: 22px;
+    -webkit-overflow-scrolling: touch;
+    font-weight: 400;
+    font-size: 18px;
+
+    @include breakpoint(xl) {
       font-size: 14px;
     }
 

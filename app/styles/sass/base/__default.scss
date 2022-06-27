@@ -20,7 +20,7 @@
   --margin: 15px;
 }
 
-// костыль
+// костыль-плавный-слайдер
 // .splide__list {
 //   transition: 0.3s;
 
@@ -51,6 +51,21 @@ html {
 html.dark {
   background-color: rgba(49, 51, 65, 0.75);
   color: var(--blue);
+
+  .promo-slide__subtitle,
+  .promo-slide__title {
+    color: var(--black);
+  }
+
+  .promo-slide__link {
+    color: var(--black);
+    border-color: var(--black);
+  }
+
+  .section-head__subtitle,
+  .section-head__title {
+    color: var(--blue);
+  }
 }
 
 button {
