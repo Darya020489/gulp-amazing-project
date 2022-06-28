@@ -46,6 +46,7 @@ document.addEventListener("DOMContentLoaded", () => {
     // speed: 3000,
     pauseOnHover: false,
     perPage: 1,
+    // padding: { right: '25%' },
     classes: {
       pagination: "splide__pagination promo-slider__pagination",
     },

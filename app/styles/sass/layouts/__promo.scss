@@ -1,6 +1,7 @@
 /* start PROMO ==================================================================*/
 .promo {
   padding-top: 177px;
+  padding-bottom: 30px;
   min-height: 100vh;
   background-image: linear-gradient(
       360deg,
@@ -16,6 +17,7 @@
 
   @include breakpoint(xl) {
     padding-top: 120px;
+    padding-bottom: 0;
   }
 
   @include breakpoint(sm) {
