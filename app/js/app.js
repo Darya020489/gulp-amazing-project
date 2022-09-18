@@ -3,6 +3,13 @@
 
 // Custom JS
 
+// THEME===========================================================================================
+document.querySelector(".switch").addEventListener("change", (event) => {
+  if (event.target.nodeName === "INPUT") {
+    document.documentElement.classList.toggle("dark");
+  }
+});
+
 // header_has-bg==============================================
 let header = document.querySelector(".header");
 
@@ -17,7 +24,7 @@ document.addEventListener("scroll", () => {
 // Mobile-menu ================================================
 const headerBurger = document.querySelector(".header__burger");
 const headerNav = document.querySelector(".header__nav");
-const headerClose = document.querySelector('.header__close');
+const headerClose = document.querySelector(".header__close");
 
 headerBurger.addEventListener("click", function (event) {
   headerBurger.classList.add("burger_closed");
@@ -25,18 +32,28 @@ headerBurger.addEventListener("click", function (event) {
   headerClose.classList.add("close_opened");
 });
 
+headerNav.addEventListener("click", function ({ target }) {
+  if (target.classList.contains("header__menu-link")) {
+    closeMenu();
+  }
+});
+
 headerClose.addEventListener("click", function (event) {
+  closeMenu();
+});
+
+function closeMenu() {
   headerBurger.classList.remove("burger_closed");
   headerNav.classList.remove("header__nav_opened");
   headerClose.classList.remove("close_opened");
-});
+}
 
 // Promo-slider ================================================
 import Splide from "@splidejs/splide";
 document.addEventListener("DOMContentLoaded", () => {
-  const promoSlides = document.querySelectorAll('[data-slide-title]');
+  const promoSlides = document.querySelectorAll("[data-slide-title]");
   let slideTitles = [];
-  promoSlides.forEach(function(slide) {
+  promoSlides.forEach(function (slide) {
     slideTitles.push(slide.dataset.slideTitle);
   });
   const promoSlider = new Splide("#promo-slider", {
@@ -54,18 +71,18 @@ document.addEventListener("DOMContentLoaded", () => {
     drag: false,
   });
 
-  promoSlider.on( 'pagination:mounted', function ( data ) {
+  promoSlider.on("pagination:mounted", function (data) {
     // You can add your class to the UL element
-    data.list.classList.add( 'splide__pagination--custom' );
-  
+    data.list.classList.add("splide__pagination--custom");
+
     // `items` contains all dot items
-    data.items.forEach( function ( item ) {
+    data.items.forEach(function (item) {
       item.button.textContent = `${slideTitles[item.page]}`;
-    } );
-  } );
+    });
+  });
   promoSlider.mount();
 
-// Slider ================================================
+  // Slider ================================================
   const revSliderSettings = {
     type: "loop",
     gap: "40px",
@@ -89,15 +106,13 @@ document.addEventListener("DOMContentLoaded", () => {
   new Splide("#author-reviews", revSliderSettings).mount();
 });
 
-
 // AOS init===============================================
 AOS.init();
 
 // Accordion===============================================
 var acc = document.getElementsByClassName("accordion__btn");
-var i;
 
-for (i = 0; i < acc.length; i++) {
+for (let i = 0; i < acc.length; i++) {
   acc[i].addEventListener("click", function () {
     this.classList.toggle("active");
     var panel = this.nextElementSibling;
@@ -108,10 +123,3 @@ for (i = 0; i < acc.length; i++) {
     }
   });
 }
-
-// THEME===========================================================================================
-document.querySelector(".switch").addEventListener("change", (event) => {
-  if (event.target.nodeName === "INPUT") {
-    document.documentElement.classList.toggle("dark");
-  }
-});
